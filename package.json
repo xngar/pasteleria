@@ -12,7 +12,8 @@
     "build:vinext": "vinext build",
     "start:vinext": "wrangler dev --config dist/server/wrangler.json",
     "deploy:vinext": "vinext-cloudflare deploy --config dist/server/wrangler.json --experimental-warm-cdn-cache",
-    "deploy:response-store": "wrangler deploy --config wrangler.response-store.jsonc"
+    "deploy:response-store": "wrangler deploy --config wrangler.response-store.jsonc",
+    "deploy:cloudflare": "npm run deploy:response-store && npm run deploy:vinext"
   },
   "dependencies": {
     "@cloudflare/workers-response-store": "^0.1.0-beta.1",

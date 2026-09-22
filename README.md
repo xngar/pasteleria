@@ -23,11 +23,10 @@ This project uses Vinext for the Cloudflare Workers build. Run these commands fr
 ```bash
 npm install
 npm run build
-npm run deploy:response-store
-npm run deploy:vinext
+npm run deploy:cloudflare
 ```
 
-The response store Worker only needs to be deployed when its package or configuration changes. The application deploy must use the generated `dist/server/wrangler.json`; do not publish the starter Worker from the Cloudflare dashboard, since that serves the default Hello World response.
+The combined command deploys the Response Store Worker first and then the application Worker. The application deploy uses the generated `dist/server/wrangler.json`; do not publish the starter Worker from the Cloudflare dashboard, since that serves the default Hello World response.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
