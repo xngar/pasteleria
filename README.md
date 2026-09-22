@@ -26,7 +26,7 @@ npm run build
 npm run deploy:cloudflare
 ```
 
-The combined command deploys the Response Store Worker first and then the application Worker. The application deploy uses the generated `dist/server/wrangler.json`; do not publish the starter Worker from the Cloudflare dashboard, since that serves the default Hello World response.
+The application deploy uses the generated `dist/server/wrangler.json`; do not publish the starter Worker from the Cloudflare dashboard, since that serves the default Hello World response.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
