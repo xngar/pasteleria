@@ -35,7 +35,7 @@ export default function Home() {
       {/* Features bar */}
       <FeaturesBar />
 
-      {/* Footer */}
+      {/* Footeer */}
       <Footer />
     </main>
   );
