@@ -1,117 +1,291 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
+  const [mounted, setMounted] = useState(false);
+  const [reduceMotion, setReduceMotion] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setReduceMotion(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setReduceMotion(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
+  const transitionClass = reduceMotion
+    ? "transition-none"
+    : "transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]";
+
+  const staggerDelay = (index: number) => reduceMotion ? 0 : index * 100;
+
   return (
-    <section className="relative bg-[#FFF5EE] overflow-hidden pt-18 pb-0 select-none">
-      {/* Top Left Organic Pink Wave Shape matching dis.jpg */}
-      <div className="absolute -top-16 -left-20 w-[420px] h-[420px] sm:w-[500px] sm:h-[500px] rounded-full bg-[#FFA4BA] opacity-35 blur-2xl pointer-events-none" />
-      <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-[#FF8EA7]/30 to-transparent rounded-full pointer-events-none" />
-
-      {/* Decorative Radiate dashes (Amber) between Title and Food Platter */}
-      <div className="absolute top-24 left-[46%] md:left-[44%] lg:left-[42%] hidden sm:flex items-center gap-1 opacity-90 pointer-events-none z-10">
-        <span className="w-1.5 h-4 bg-[#FF9F1C] rounded-full rotate-[-28deg] inline-block"></span>
-        <span className="w-1.5 h-5 bg-[#FF9F1C] rounded-full rotate-[-5deg] inline-block"></span>
-        <span className="w-1.5 h-4 bg-[#FF9F1C] rounded-full rotate-[24deg] inline-block"></span>
+    <section
+      className="relative overflow-hidden bg-[var(--cream)] select-none flex flex-col min-h-svh"
+      style={{
+        "--cream": "#FFF8F0",
+        "--mint": "#A8E6CF",
+        "--peach": "#FFB5A7",
+        "--rose": "#F8A5C2",
+        "--chocolate": "#3D2B1F",
+        "--chocolate-light": "#5C4A3D",
+        "--cherry": "#D64045",
+        "--cherry-soft": "#F5C6CB",
+      } as React.CSSProperties}
+      aria-labelledby="hero-title"
+    >
+      {/* Full-bleed food background - aligned to the right */}
+      <div className="absolute inset-0 z-[1] pointer-events-none" role="presentation">
+        <Image
+          src="/hero_food_final.png"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-right"
+          priority
+          quality={92}
+        />
+        {/* Readability overlays: heavy cream over the text side, transparent over the photo side */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FFF8F0] via-[#FFF8F0]/80 to-[#FFF8F0] lg:bg-gradient-to-r lg:from-[#FFF8F0] lg:via-[#FFF8F0]/88 lg:to-[#FFF8F0]/10" />
+        {/* Bottom fade into the wave */}
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#FFF8F0]/95 to-transparent" />
       </div>
 
-      {/* Decorative Sparkles Top Right */}
-      <div className="absolute top-20 right-12 text-[#FFA4BA] text-xl font-bold select-none pointer-events-none hidden md:block z-10">
-        ✦
-      </div>
-      <div className="absolute top-28 right-8 text-[#FF9F1C] text-sm select-none pointer-events-none hidden md:block z-10">
-        ✦
+      {/* Subtle noise texture overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none z-[3] opacity-[0.02]"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Floating flavor badges over the photo (desktop) */}
+      <div className="hidden lg:flex absolute right-8 xl:right-16 top-1/2 -translate-y-1/2 z-20 flex-col items-end gap-3 pointer-events-none" aria-hidden="true">
+        <span className="bg-white/90 backdrop-blur-sm text-[var(--chocolate)] text-sm font-bold px-4 py-2 rounded-full shadow-lg ring-1 ring-[var(--cream)] rotate-[4deg]">
+          Strawberry Swirl
+        </span>
+        <span className="bg-white/90 backdrop-blur-sm text-[var(--chocolate)] text-sm font-bold px-4 py-2 rounded-full shadow-lg ring-1 ring-[var(--cream)] -rotate-3">
+          Mint Chip
+        </span>
+        <span className="bg-white/90 backdrop-blur-sm text-[var(--chocolate)] text-sm font-bold px-4 py-2 rounded-full shadow-lg ring-1 ring-[var(--cream)] rotate-2">
+          Salted Caramel
+        </span>
+        <span className="bg-white/90 backdrop-blur-sm text-[var(--chocolate)] text-sm font-bold px-4 py-2 rounded-full shadow-lg ring-1 ring-[var(--cream)] -rotate-2">
+          Vanilla Bean
+        </span>
       </div>
 
-      {/* Main Container */}
-      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between min-h-[500px] lg:min-h-[550px] relative z-10">
-        {/* Left Side: Typography & CTA */}
-        <div className="flex-1 pt-6 md:pt-10 pb-8 md:pb-12 max-w-lg z-20">
-          {/* Headline */}
-          <div className="flex flex-col items-start leading-none mb-4">
-            {/* Line 1: Your Little */}
-            <h2 className="font-script text-[#FF2D7A] text-5xl sm:text-6xl md:text-7xl lg:text-[76px] -rotate-2 transform origin-left drop-shadow-sm mb-1">
-              Your Little
-            </h2>
+      {/* Decorative sprinkles / confetti - subtle, friendly */}
+      <div className="absolute top-16 right-12 flex items-center gap-1.5 opacity-70 pointer-events-none hidden md:flex z-10" aria-hidden="true">
+        <span className="w-2 h-2 bg-[var(--mint)] rounded-full" />
+        <span className="w-1.5 h-1.5 bg-[var(--rose)] rounded-full" />
+        <span className="w-2 h-2 bg-[var(--peach)] rounded-full" />
+        <span className="w-1.5 h-1.5 bg-[var(--cherry)] rounded-full" />
+      </div>
 
-            {/* Line 2: Treat ♡ */}
-            <div className="flex items-center gap-2 my-1">
-              <h2 className="text-[#2C1810] font-black italic text-5xl sm:text-6xl md:text-7xl lg:text-[80px] tracking-tight font-serif leading-none">
-                Treat
-              </h2>
-              {/* Pink Heart icon matching dis.jpg */}
-              <span className="text-[#FF2D7A] text-3xl sm:text-4xl md:text-5xl font-bold transform -rotate-12 translate-y-1">
-                ♥
-              </span>
-              <span className="text-[#2C1810] text-3xl sm:text-4xl font-black -ml-1 -mt-4">
-                &apos;
-              </span>
+      <div className="absolute bottom-24 left-16 flex items-center gap-1 opacity-60 pointer-events-none hidden lg:flex z-10" aria-hidden="true">
+        <span className="w-1.5 h-1.5 bg-[var(--mint)] rounded-full" />
+        <span className="w-2 h-2 bg-[var(--peach)] rounded-full" />
+        <span className="w-1.5 h-1.5 bg-[var(--rose)] rounded-full" />
+      </div>
+
+      {/* Main Container - centered in the viewport above the wave */}
+      <div className="container mx-auto max-w-[72rem] px-4 sm:px-6 lg:px-8 relative z-10 flex-1 flex items-center py-10 sm:py-12">
+        <div className="flex flex-col items-center lg:items-start justify-center w-full">
+          {/* Typography & CTA - over the image, visible on the cream side */}
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-xl z-20 w-full mx-auto lg:mx-0">
+            {/* Headline Group - big, impactful, memorable */}
+            <div className="flex flex-col items-center lg:items-start justify-center gap-0.5 mb-5" role="heading" aria-level={1} id="hero-title">
+              {/* Eyebrow badge - friendly signal */}
+              <div
+                className={`${transitionClass} mb-3 flex items-center gap-2 bg-white/60 backdrop-blur-sm text-[var(--cherry)] text-[11px] sm:text-xs font-extrabold uppercase tracking-[0.22em] px-3.5 py-1.5 rounded-full ring-1 ring-[var(--rose)]/40 shadow-sm`}
+                style={{
+                  opacity: mounted ? 1 : 0,
+                  transform: mounted ? "translateY(0)" : "translateY(16px)",
+                  transitionDelay: `${staggerDelay(0)}ms`,
+                }}
+              >
+                <span aria-hidden="true">✦</span>
+                Hand-scooped &amp; made fresh daily
+              </div>
+
+              {/* Line 1 - script */}
+              <div
+                className={`${transitionClass} transform origin-center`}
+                style={{
+                  opacity: mounted ? 1 : 0,
+                  transform: mounted ? "translateY(0)" : "translateY(24px)",
+                  transitionDelay: `${staggerDelay(1)}ms`,
+                }}
+              >
+                <h1 className="font-script text-[var(--cherry)] text-[40px] sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[82px] leading-[1.08] tracking-wide drop-shadow-[0_2px_10px_rgba(214,64,69,0.28)] text-center lg:text-left">
+                  Here, happiness
+                </h1>
+              </div>
+
+              {/* Line 2 - the big anchor word "MELTS" */}
+              <div
+                className={`${transitionClass} relative inline-block`}
+                style={{
+                  opacity: mounted ? 1 : 0,
+                  transform: mounted ? "translateY(0)" : "translateY(24px) scale(0.97)",
+                  transitionDelay: `${staggerDelay(2)}ms`,
+                }}
+              >
+                <span className="text-[var(--chocolate)] font-black italic text-[60px] sm:text-[84px] md:text-[100px] lg:text-[116px] xl:text-[130px] leading-[0.92] font-serif tracking-tight select-none block text-center lg:text-left">
+                  MELTS
+                </span>
+                {/* Melting drips underline - the ice cream anchor */}
+                <svg
+                  viewBox="0 0 300 30"
+                  preserveAspectRatio="none"
+                  className="absolute -bottom-6 left-0 w-full h-7 pointer-events-none drop-shadow-[0_3px_6px_rgba(214,64,69,0.35)]"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 14 C 55 5, 105 20, 150 10 C 190 3, 235 16, 295 9"
+                    stroke="var(--cherry)"
+                    strokeWidth="9"
+                    strokeLinecap="round"
+                    fill="none"
+                  />
+                  <circle cx="58" cy="24" r="3.6" fill="var(--cherry)" />
+                  <circle cx="150" cy="19" r="4.2" fill="var(--cherry)" />
+                  <circle cx="240" cy="23" r="3.4" fill="var(--cherry)" />
+                  <path d="M96 24 L 99 15 L 102 25 Z" fill="var(--cherry)" />
+                  <path d="M196 22 L 199 15 L 202 23 Z" fill="var(--cherry)" />
+                </svg>
+              </div>
+
+              {/* Line 3 - script with heart */}
+              <div
+                className={`${transitionClass} transform origin-center`}
+                style={{
+                  opacity: mounted ? 1 : 0,
+                  transform: mounted ? "translateY(0)" : "translateY(24px)",
+                  transitionDelay: `${staggerDelay(3)}ms`,
+                }}
+              >
+                <h2 className="font-script text-[var(--cherry)] text-[40px] sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[82px] leading-[1.12] tracking-wide drop-shadow-[0_2px_10px_rgba(214,64,69,0.28)] text-center lg:text-left">
+                  into every scoop.{" "}
+                  <span className="text-[var(--rose)] text-3xl sm:text-5xl lg:text-6xl inline-block -rotate-12 translate-y-1" aria-hidden="true">
+                    ♡
+                  </span>
+                </h2>
+              </div>
             </div>
 
-            {/* Line 3: Starts Here */}
-            <h2 className="font-script text-[#FF2D7A] text-5xl sm:text-6xl md:text-7xl lg:text-[76px] rotate-1 transform origin-left drop-shadow-sm mt-1">
-              Starts Here
-            </h2>
-          </div>
+            {/* Subtitle - playful, warm, credible */}
+            <p
+              className="text-[var(--chocolate-light)] font-medium text-sm sm:text-base lg:text-[17px] leading-snug max-w-sm lg:max-w-md"
+              style={{
+                opacity: mounted ? 1 : 0,
+                transform: mounted ? "translateY(0)" : "translateY(16px)",
+                transitionDelay: `${staggerDelay(4)}ms`,
+              }}
+            >
+              Real ingredients. Real flavors. Real smiles.
+              <br />
+              Delivered cold, straight to your door.
+            </p>
 
-          {/* Subtitle */}
-          <p className="text-[#2C1810] font-semibold text-sm sm:text-base md:text-lg mt-5 mb-7 leading-snug">
-            Delicious bites. Happy vibes.
-            <br />
-            Delivered fast to your door!
-          </p>
+            {/* CTA Button - warm, inviting, bigger */}
+            <div
+              className="flex flex-col items-center lg:items-start gap-3 mt-6 lg:mt-8 w-full lg:w-auto"
+              style={{
+                opacity: mounted ? 1 : 0,
+                transform: mounted ? "translateY(0)" : "translateY(16px)",
+                transitionDelay: `${staggerDelay(5)}ms`,
+              }}
+            >
+              <div className="flex items-center gap-3 flex-wrap justify-center lg:justify-start">
+                <button
+                  className="group relative inline-flex items-center gap-2.5 bg-[var(--cherry)] hover:bg-[var(--cherry)] text-white font-extrabold text-sm sm:text-base tracking-widest uppercase px-8 py-4 rounded-full shadow-[0_10px_28px_rgba(214,64,69,0.4)] hover:shadow-[0_14px_38px_rgba(214,64,69,0.5)] hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--cherry-soft)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--cream)] active:scale-[0.98] transition-all duration-150 ease-out"
+                  aria-label="Order your ice cream treats now"
+                >
+                  <span>Order Now</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-150"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2.5}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </button>
 
-          {/* CTA Button & Bottom Left Accents */}
-          <div className="flex items-center gap-4">
-            <button className="bg-[#FF2D7A] hover:bg-[#E01E69] transition-all duration-200 text-white font-extrabold text-xs sm:text-sm tracking-widest uppercase px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-2 ring-4 ring-[#FF2D7A]/25 cursor-pointer">
-              ORDER NOW
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-4 h-4 text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={3}
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
+                {/* Secondary subtle CTA */}
+                <button
+                  className="hidden sm:inline-flex items-center gap-1.5 text-[var(--chocolate-light)] hover:text-[var(--chocolate)] font-semibold text-sm sm:text-base transition-colors duration-150"
+                  aria-label="View all flavors"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                  Explore Flavors
+                </button>
+              </div>
 
-          {/* Decorative Pink Accent Dashes on Bottom Left matching dis.jpg */}
-          <div className="mt-6 flex items-center gap-1 opacity-80">
-            <span className="w-1.5 h-4 bg-[#FF2D7A] rounded-full rotate-[-35deg] inline-block"></span>
-            <span className="w-1.5 h-4 bg-[#FF2D7A] rounded-full rotate-[-10deg] inline-block"></span>
-            <span className="w-3.5 h-1.5 bg-[#FF2D7A] rounded-full inline-block"></span>
-          </div>
-        </div>
+              {/* Trust signal chips - friendly credibility */}
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-2">
+                <span className="inline-flex items-center gap-1.5 text-[var(--chocolate-light)] text-xs sm:text-sm font-semibold">
+                  <span className="text-[#F5A623] text-sm" aria-hidden="true">★</span>
+                  4.9 · 2,400+ happy scoops
+                </span>
+                <span className="w-1 h-1 rounded-full bg-[var(--rose)]" aria-hidden="true" />
+                <span className="inline-flex items-center gap-1.5 text-[var(--chocolate-light)] text-xs sm:text-sm font-semibold">
+                  <span className="text-[#A8E6CF] text-sm" aria-hidden="true">✦</span>
+                  Vegan &amp; lactose-free options
+                </span>
+              </div>
+            </div>
 
-        {/* Right Side: Exact Food Platter Image */}
-        <div className="flex-1 flex items-end justify-center md:justify-end relative w-full mt-2 md:mt-0">
-          <div className="relative w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl h-[340px] sm:h-[420px] md:h-[480px] lg:h-[520px]">
-            <Image
-              src="/hero_food_final.png"
-              alt="Delicious Treato food spread on wooden platter"
-              fill
-              sizes="(max-width: 768px) 100vw, 55vw"
-              className="object-contain object-bottom"
-              priority
-            />
+            {/* Decorative accent dashes - bottom left, integrated */}
+            <div
+              className="mt-7 flex items-center gap-1.5 opacity-50"
+              style={{
+                opacity: mounted ? 1 : 0,
+                transitionDelay: `${staggerDelay(6)}ms`,
+              }}
+              aria-hidden="true"
+            >
+              <span className="w-2 h-5 bg-[var(--rose)] rounded-full rotate-[-30deg]" />
+              <span className="w-1.5 h-5 bg-[var(--peach)] rounded-full rotate-[-8deg]" />
+              <span className="w-5 h-1.5 bg-[var(--mint)] rounded-full" />
+              <span className="w-2 h-5 bg-[var(--cherry)] rounded-full rotate-[15deg]" />
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Pink Curve Shape flowing seamlessly into SearchBar */}
-      <div className="w-full overflow-hidden leading-none pointer-events-none -mt-4 relative z-0">
+      {/* Bottom wave transition - seamless flow into SearchBar */}
+      <div className="w-full overflow-hidden leading-none pointer-events-none relative z-10 -mt-px" aria-hidden="true">
         <svg
-          viewBox="0 0 1440 60"
+          viewBox="0 0 1440 80"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-10 sm:h-14 block"
+          className="w-full h-16 sm:h-20 block"
           preserveAspectRatio="none"
         >
+          <defs>
+            <linearGradient id="waveGradient" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+              <stop offset="0%" stopColor="#F8A5C2" stopOpacity="0.95" />
+              <stop offset="100%" stopColor="#FFB5A7" stopOpacity="0.9" />
+            </linearGradient>
+          </defs>
           <path
-            d="M0,25 C320,60 720,10 1100,50 C1280,65 1380,40 1440,30 L1440,60 L0,60 Z"
-            fill="#FFA8BF"
+            d="M0,35 C280,70 580,15 920,55 C1140,80 1300,40 1440,30 L1440,80 L0,80 Z"
+            fill="url(#waveGradient)"
           />
         </svg>
       </div>

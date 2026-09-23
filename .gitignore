@@ -23,6 +23,7 @@
 # misc
 .DS_Store
 *.pem
+CLOUDFLARE_WORKERS_SETUP.md
 
 # debug
 npm-debug.log*
