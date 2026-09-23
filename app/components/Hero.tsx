@@ -93,16 +93,16 @@ export default function Hero() {
         <span className="w-1.5 h-1.5 bg-[var(--rose)] rounded-full" />
       </div>
 
-      {/* Main Container - centered in the viewport above the wave */}
-      <div className="container mx-auto max-w-[72rem] px-4 sm:px-6 lg:px-8 relative z-10 flex-1 flex items-center py-10 sm:py-12">
+      {/* Main Container - centered in the viewport, clear of the navbar */}
+      <div className="container mx-auto max-w-[72rem] px-4 sm:px-6 lg:px-8 relative z-10 flex-1 flex items-center pt-24 sm:pt-28 lg:pt-32 pb-8 sm:pb-10">
         <div className="flex flex-col items-center lg:items-start justify-center w-full">
           {/* Typography & CTA - over the image, visible on the cream side */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-xl z-20 w-full mx-auto lg:mx-0">
-            {/* Headline Group - big, impactful, memorable */}
-            <div className="flex flex-col items-center lg:items-start justify-center gap-0.5 mb-5" role="heading" aria-level={1} id="hero-title">
+            {/* Headline Group - big, impactful, but fits on screen */}
+            <div className="flex flex-col items-center lg:items-start justify-center gap-0.5 mb-4" role="heading" aria-level={1} id="hero-title">
               {/* Eyebrow badge - friendly signal */}
               <div
-                className={`${transitionClass} mb-3 flex items-center gap-2 bg-white/60 backdrop-blur-sm text-[var(--cherry)] text-[11px] sm:text-xs font-extrabold uppercase tracking-[0.22em] px-3.5 py-1.5 rounded-full ring-1 ring-[var(--rose)]/40 shadow-sm`}
+                className={`${transitionClass} mb-2.5 flex items-center gap-2 bg-white/60 backdrop-blur-sm text-[var(--cherry)] text-[11px] sm:text-xs font-extrabold uppercase tracking-[0.22em] px-3.5 py-1.5 rounded-full ring-1 ring-[var(--rose)]/40 shadow-sm`}
                 style={{
                   opacity: mounted ? 1 : 0,
                   transform: mounted ? "translateY(0)" : "translateY(16px)",
@@ -122,7 +122,7 @@ export default function Hero() {
                   transitionDelay: `${staggerDelay(1)}ms`,
                 }}
               >
-                <h1 className="font-script text-[var(--cherry)] text-[40px] sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[82px] leading-[1.08] tracking-wide drop-shadow-[0_2px_10px_rgba(214,64,69,0.28)] text-center lg:text-left">
+                <h1 className="font-script text-[var(--cherry)] text-[36px] sm:text-5xl md:text-[58px] lg:text-[66px] xl:text-[74px] leading-[1.08] tracking-wide drop-shadow-[0_2px_10px_rgba(214,64,69,0.28)] text-center lg:text-left">
                   Here, happiness
                 </h1>
               </div>
@@ -136,7 +136,7 @@ export default function Hero() {
                   transitionDelay: `${staggerDelay(2)}ms`,
                 }}
               >
-                <span className="text-[var(--chocolate)] font-black italic text-[60px] sm:text-[84px] md:text-[100px] lg:text-[116px] xl:text-[130px] leading-[0.92] font-serif tracking-tight select-none block text-center lg:text-left">
+                <span className="text-[var(--chocolate)] font-black italic text-[54px] sm:text-[76px] md:text-[92px] lg:text-[106px] xl:text-[118px] leading-[0.92] font-serif tracking-tight select-none block text-center lg:text-left">
                   MELTS
                 </span>
                 {/* Melting drips underline - the ice cream anchor */}
@@ -170,9 +170,9 @@ export default function Hero() {
                   transitionDelay: `${staggerDelay(3)}ms`,
                 }}
               >
-                <h2 className="font-script text-[var(--cherry)] text-[40px] sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[82px] leading-[1.12] tracking-wide drop-shadow-[0_2px_10px_rgba(214,64,69,0.28)] text-center lg:text-left">
+                <h2 className="font-script text-[var(--cherry)] text-[36px] sm:text-5xl md:text-[58px] lg:text-[66px] xl:text-[74px] leading-[1.12] tracking-wide drop-shadow-[0_2px_10px_rgba(214,64,69,0.28)] text-center lg:text-left">
                   into every scoop.{" "}
-                  <span className="text-[var(--rose)] text-3xl sm:text-5xl lg:text-6xl inline-block -rotate-12 translate-y-1" aria-hidden="true">
+                  <span className="text-[var(--rose)] text-3xl sm:text-4xl lg:text-5xl inline-block -rotate-12 translate-y-1" aria-hidden="true">
                     ♡
                   </span>
                 </h2>
@@ -181,7 +181,7 @@ export default function Hero() {
 
             {/* Subtitle - playful, warm, credible */}
             <p
-              className="text-[var(--chocolate-light)] font-medium text-sm sm:text-base lg:text-[17px] leading-snug max-w-sm lg:max-w-md"
+              className="text-[var(--chocolate-light)] font-medium text-sm sm:text-base leading-snug max-w-sm lg:max-w-md"
               style={{
                 opacity: mounted ? 1 : 0,
                 transform: mounted ? "translateY(0)" : "translateY(16px)",
@@ -195,7 +195,7 @@ export default function Hero() {
 
             {/* CTA Button - warm, inviting, bigger */}
             <div
-              className="flex flex-col items-center lg:items-start gap-3 mt-6 lg:mt-8 w-full lg:w-auto"
+              className="flex flex-col items-center lg:items-start gap-3 mt-5 lg:mt-6 w-full lg:w-auto"
               style={{
                 opacity: mounted ? 1 : 0,
                 transform: mounted ? "translateY(0)" : "translateY(16px)",
@@ -204,7 +204,7 @@ export default function Hero() {
             >
               <div className="flex items-center gap-3 flex-wrap justify-center lg:justify-start">
                 <button
-                  className="group relative inline-flex items-center gap-2.5 bg-[var(--cherry)] hover:bg-[var(--cherry)] text-white font-extrabold text-sm sm:text-base tracking-widest uppercase px-8 py-4 rounded-full shadow-[0_10px_28px_rgba(214,64,69,0.4)] hover:shadow-[0_14px_38px_rgba(214,64,69,0.5)] hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--cherry-soft)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--cream)] active:scale-[0.98] transition-all duration-150 ease-out"
+                  className="group relative inline-flex items-center gap-2.5 bg-[var(--cherry)] hover:bg-[var(--cherry)] text-white font-extrabold text-sm sm:text-base tracking-widest uppercase px-7 py-3.5 rounded-full shadow-[0_10px_28px_rgba(214,64,69,0.4)] hover:shadow-[0_14px_38px_rgba(214,64,69,0.5)] hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--cherry-soft)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--cream)] active:scale-[0.98] transition-all duration-150 ease-out"
                   aria-label="Order your ice cream treats now"
                 >
                   <span>Order Now</span>
@@ -252,7 +252,7 @@ export default function Hero() {
 
             {/* Decorative accent dashes - bottom left, integrated */}
             <div
-              className="mt-7 flex items-center gap-1.5 opacity-50"
+              className="mt-5 flex items-center gap-1.5 opacity-50"
               style={{
                 opacity: mounted ? 1 : 0,
                 transitionDelay: `${staggerDelay(6)}ms`,
@@ -269,12 +269,12 @@ export default function Hero() {
       </div>
 
       {/* Bottom wave transition - seamless flow into SearchBar */}
-      <div className="w-full overflow-hidden leading-none pointer-events-none relative z-10 -mt-px" aria-hidden="true">
+      <div className="w-full overflow-hidden leading-none pointer-events-none relative z-10 shrink-0" aria-hidden="true">
         <svg
           viewBox="0 0 1440 80"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-16 sm:h-20 block"
+          className="w-full h-8 sm:h-10 block"
           preserveAspectRatio="none"
         >
           <defs>
