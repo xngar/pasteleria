@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const customerReviews = [
-  { id: 1, image: "/customer_polaroid_1.png", rotate: "-rotate-2" },
-  { id: 2, image: "/customer_polaroid_2.png", rotate: "rotate-1" },
-  { id: 3, image: "/customer_polaroid_3.png", rotate: "-rotate-1" },
-  { id: 4, image: "/customer_polaroid_4.png", rotate: "rotate-2" },
+  { id: 1, image: "/cliente-feliz-treato-1.png", rotate: "-rotate-2" },
+  { id: 2, image: "/cliente-feliz-treato-2.png", rotate: "rotate-1" },
+  { id: 3, image: "/cliente-feliz-treato-3.png", rotate: "-rotate-1" },
+  { id: 4, image: "/cliente-feliz-treato-4.png", rotate: "rotate-2" },
 ];
 
 export default function LoyaltyAndReviews() {
@@ -33,8 +33,8 @@ export default function LoyaltyAndReviews() {
             {/* 3D Loyalty Gift Chest */}
             <div className="relative w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0 z-10">
               <Image
-                src="/loyalty_chest.png"
-                alt="Cofre de recompensas de fidelidad"
+                src="/cofre-fidelidad-treato.png"
+                alt="Cofre de recompensas del programa de fidelidad de Treato"
                 fill
                 sizes="140px"
                 className="object-contain"
@@ -62,7 +62,7 @@ Amados por nuestros golosos
                 >
                   <Image
                     src={review.image}
-                    alt={`Cliente de Treato ${review.id}`}
+                    alt={`Cliente feliz de Treato disfrutando de un capricho (${review.id})`}
                     fill
                     sizes="120px"
                     className="object-cover"

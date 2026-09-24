@@ -46,7 +46,7 @@ export default function Hero() {
       {/* Full-bleed food background - aligned to the right */}
       <div className="absolute inset-0 z-[1] pointer-events-none" role="presentation">
         <Image
-          src="/hero_food_hd.jpg"
+          src="/hero-dulces-y-helados-treato.jpg"
           alt=""
           fill
           sizes="100vw"

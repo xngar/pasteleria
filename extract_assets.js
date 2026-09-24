@@ -7,10 +7,10 @@ async function extract() {
 
   const crops = [
     // Combos (clean cards)
-    { name: 'combo_1_real.jpg', left: 42, top: 518, width: 156, height: 185 },
-    { name: 'combo_2_real.jpg', left: 210, top: 518, width: 156, height: 185 },
-    { name: 'combo_3_real.jpg', left: 378, top: 518, width: 156, height: 185 },
-    { name: 'combo_4_real.jpg', left: 540, top: 518, width: 156, height: 185 },
+    { name: 'combo-duo-clasico-treato.jpg', left: 42, top: 518, width: 156, height: 185 },
+    { name: 'combo-banquete-familiar-treato.jpg', left: 210, top: 518, width: 156, height: 185 },
+    { name: 'combo-crunch-time-treato.jpg', left: 378, top: 518, width: 156, height: 185 },
+    { name: 'combo-doble-deleite-treato.jpg', left: 540, top: 518, width: 156, height: 185 },
 
     // Limited Treats (the 3 white capsules with labels)
     { name: 'treat_capsule_1.png', left: 295, top: 670, width: 130, height: 140 }, // wait, check y
@@ -19,18 +19,18 @@ async function extract() {
 
     // Correct coords from 736x1307:
     // Limited treats y is around 855-1000
-    { name: 'treat_1.png', left: 295, top: 855, width: 130, height: 145 },
-    { name: 'treat_2.png', left: 428, top: 855, width: 125, height: 145 },
-    { name: 'treat_3.png', left: 545, top: 855, width: 130, height: 145 },
+    { name: 'tarta-lava-chocolate-treato.png', left: 295, top: 855, width: 130, height: 145 },
+    { name: 'batido-fresas-treato.png', left: 428, top: 855, width: 125, height: 145 },
+    { name: 'sundae-palomitas-caramelo-treato.png', left: 545, top: 855, width: 130, height: 145 },
 
     // Loyalty 3D chest box
-    { name: 'loyalty_chest.png', left: 200, top: 1000, width: 125, height: 115 },
+    { name: 'cofre-fidelidad-treato.png', left: 200, top: 1000, width: 125, height: 115 },
 
     // Customer polaroids
-    { name: 'customer_polaroid_1.png', left: 330, top: 1040, width: 92, height: 102 },
-    { name: 'customer_polaroid_2.png', left: 425, top: 1040, width: 92, height: 102 },
-    { name: 'customer_polaroid_3.png', left: 520, top: 1040, width: 92, height: 102 },
-    { name: 'customer_polaroid_4.png', left: 615, top: 1040, width: 92, height: 102 },
+    { name: 'cliente-feliz-treato-1.png', left: 330, top: 1040, width: 92, height: 102 },
+    { name: 'cliente-feliz-treato-2.png', left: 425, top: 1040, width: 92, height: 102 },
+    { name: 'cliente-feliz-treato-3.png', left: 520, top: 1040, width: 92, height: 102 },
+    { name: 'cliente-feliz-treato-4.png', left: 615, top: 1040, width: 92, height: 102 },
   ];
 
   for (const c of crops) {

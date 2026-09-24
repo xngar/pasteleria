@@ -4,17 +4,17 @@ const treats = [
   {
     id: 1,
     name: "Tarta de lava de chocolate",
-    image: "/treat_1.png",
+    image: "/tarta-lava-chocolate-treato.png",
   },
   {
     id: 2,
     name: "Batido de fresas Bliss",
-    image: "/treat_2.png",
+    image: "/batido-fresas-treato.png",
   },
   {
     id: 3,
     name: "Sundae de palomitas de caramelo",
-    image: "/treat_3.png",
+    image: "/sundae-palomitas-caramelo-treato.png",
   },
 ];
 
@@ -66,7 +66,7 @@ export default function LimitedTreat() {
               >
                 <Image
                   src={treat.image}
-                  alt={treat.name}
+                  alt={`Foto de ${treat.name} de Treato`}
                   fill
                   sizes="160px"
                   className="object-contain"

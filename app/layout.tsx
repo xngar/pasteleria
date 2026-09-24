@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Nunito, Pacifico, Playfair_Display } from "next/font/google";
+import CookieBanner from "./components/CookieBanner";
 import "./globals.css";
 
 const inter = Inter({
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
     template: "%s | Treato",
   },
   description:
-    "Helados artesanales, postres, hamburguesas y batidos hechos a mano. Reparto en frío a domicilio. Opciones veganas y sin lactosa. Tus caprichos, directo a tu puerta.",
+    "Helados artesanales, postres, hamburguesas, batidos y snacks hechos a mano con reparto en frío a domicilio. Opciones veganas y sin lactosa. Pide tus caprichos en Treato.",
   keywords: [
     "helados",
     "pastelería",
@@ -67,13 +68,13 @@ export const metadata: Metadata = {
     siteName: "Treato",
     title: "Treato | Helados, postres y repostería a domicilio",
     description:
-      "Helados artesanales, postres, hamburguesas y batidos hechos a mano. Reparto en frío a domicilio. Tus caprichos, directo a tu puerta.",
+      "Helados artesanales, postres, hamburguesas, batidos y snacks hechos a mano con reparto en frío a domicilio. Opciones veganas y sin lactosa. Pide tus caprichos en Treato.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Treato | Helados, postres y repostería a domicilio",
     description:
-      "Helados artesanales, postres, hamburguesas y batidos hechos a mano. Reparto en frío a domicilio.",
+      "Helados artesanales, postres, hamburguesas, batidos y snacks hechos a mano con reparto en frío a domicilio. Opciones veganas y sin lactosa.",
   },
 };
 
@@ -84,6 +85,7 @@ const LdJson = {
       "@type": "IceCreamShop",
       "@id": `${SITE_URL}/#organization`,
       name: "Treato",
+      alternateName: "Treato – Helados, postres y repostería a domicilio",
       description:
         "Helados artesanales, postres, hamburguesas y batidos hechos a mano, con reparto en frío a domicilio.",
       url: SITE_URL,
@@ -95,6 +97,42 @@ const LdJson = {
         "@type": "Place",
         name: "España",
       },
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Calle del Postre, 12",
+        addressLocality: "Madrid",
+        postalCode: "28001",
+        addressRegion: "Madrid",
+        addressCountry: "ES",
+      },
+      telephone: "+34 910 000 000",
+      email: "hola@treato.com",
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Sunday",
+          ],
+          opens: "10:00",
+          closes: "23:00",
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Friday", "Saturday"],
+          opens: "10:00",
+          closes: "01:00",
+        },
+      ],
+      sameAs: [
+        "https://www.instagram.com/treato",
+        "https://www.facebook.com/treato",
+        "https://www.tiktok.com/@treato",
+        "https://www.youtube.com/@treato",
+      ],
     },
     {
       "@type": "WebSite",
@@ -117,9 +155,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <body className="min-h-full flex flex-col antialiased bg-[#FFF0E8]">
         {children}
+        <CookieBanner />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(LdJson) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(LdJson).replace(/</g, "\\u003c"),
+          }}
         />
       </body>
     </html>

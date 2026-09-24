@@ -8,49 +8,49 @@ const combos = [
     id: 1,
     name: "Combo de hamburguesa con queso",
     price: "$8.99",
-    image: "/combo_cheesy_burger.jpg",
+    image: "/combo-hamburguesa-queso-treato.jpg",
   },
   {
     id: 2,
     name: "Combo Goloso",
     price: "$7.49",
-    image: "/combo_sweet_tooth.jpg",
+    image: "/combo-goloso-treato.jpg",
   },
   {
     id: 3,
     name: "Caja Snack Attack",
     price: "$9.49",
-    image: "/combo_snack_attack.jpg",
+    image: "/combo-snack-attack-treato.jpg",
   },
   {
     id: 4,
     name: "Combo Mega Treat",
     price: "$10.99",
-    image: "/combo_mega_treat.jpg",
+    image: "/combo-mega-treat-treato.jpg",
   },
   {
     id: 5,
     name: "Classic Duet Combo",
     price: "$8.49",
-    image: "/combo_1_real.jpg",
+    image: "/combo-duo-clasico-treato.jpg",
   },
   {
     id: 6,
     name: "Family Feast Combo",
     price: "$12.99",
-    image: "/combo_2_real.jpg",
+    image: "/combo-banquete-familiar-treato.jpg",
   },
   {
     id: 7,
     name: "Crunch Time Combo",
     price: "$9.99",
-    image: "/combo_3_real.jpg",
+    image: "/combo-crunch-time-treato.jpg",
   },
   {
     id: 8,
     name: "Double Delight Combo",
     price: "$11.49",
-    image: "/combo_4_real.jpg",
+    image: "/combo-doble-deleite-treato.jpg",
   },
 ];
 
@@ -122,7 +122,7 @@ export default function PerfectCombos() {
                 <div className="relative h-36 sm:h-44 w-full overflow-hidden bg-[#FFF8F0]">
                   <Image
                     src={combo.image}
-                    alt={combo.name}
+                    alt={`Foto de ${combo.name}`}
                     fill
                     sizes="(max-width: 640px) 50vw, 25vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-300"

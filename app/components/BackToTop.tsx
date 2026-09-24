@@ -25,6 +25,14 @@ export default function BackToTop() {
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className="heart-btn cursor-pointer"
       >
+        <span className="heart-burst" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+          <span />
+          <span />
+          <span />
+        </span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="heart-arrow text-white"
