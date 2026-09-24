@@ -46,13 +46,12 @@ export default function Hero() {
       {/* Full-bleed food background - aligned to the right */}
       <div className="absolute inset-0 z-[1] pointer-events-none" role="presentation">
         <Image
-          src="/hero_food_final.png"
+          src="/hero_food_hd.jpg"
           alt=""
           fill
           sizes="100vw"
           className="object-cover object-right"
           priority
-          quality={92}
         />
         {/* Readability overlays: heavy cream over the text side, transparent over the photo side */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#FFF8F0] via-[#FFF8F0]/80 to-[#FFF8F0] lg:bg-gradient-to-r lg:from-[#FFF8F0] lg:via-[#FFF8F0]/88 lg:to-[#FFF8F0]/10" />
@@ -70,7 +69,7 @@ export default function Hero() {
       />
 
       {/* Floating flavor badges over the photo (desktop) */}
-      <div className="hidden lg:flex absolute right-8 xl:right-16 top-1/2 -translate-y-1/2 z-20 flex-col items-end gap-3 pointer-events-none" aria-hidden="true">
+      {/* <div className="hidden lg:flex absolute right-8 xl:right-16 top-1/2 -translate-y-1/2 z-20 flex-col items-end gap-3 pointer-events-none" aria-hidden="true">
         <span className="bg-white/90 backdrop-blur-sm text-[var(--chocolate)] text-sm font-bold px-4 py-2 rounded-full shadow-lg ring-1 ring-[var(--cream)] rotate-[4deg]">
           Remolino de fresa
         </span>
@@ -83,7 +82,7 @@ export default function Hero() {
         <span className="bg-white/90 backdrop-blur-sm text-[var(--chocolate)] text-sm font-bold px-4 py-2 rounded-full shadow-lg ring-1 ring-[var(--cream)] -rotate-2">
           Vainilla
         </span>
-      </div>
+      </div> */}
 
       {/* Decorative sprinkles / confetti - subtle, friendly */}
       <div className="absolute top-16 right-12 flex items-center gap-1.5 opacity-70 pointer-events-none hidden md:flex z-10" aria-hidden="true">
