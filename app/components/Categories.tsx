@@ -12,7 +12,7 @@ interface Category {
 const categories: Category[] = [
   {
     id: 1,
-    name: "Sweet Treats",
+    name: "Postres dulces",
     circleBg: "bg-[#FFAEC9]",
     icon: (
       <svg viewBox="0 0 48 48" className="w-11 h-11 sm:w-13 sm:h-13" fill="none">
@@ -38,7 +38,7 @@ const categories: Category[] = [
   },
   {
     id: 2,
-    name: "Savory Bites",
+    name: "Bocados salados",
     circleBg: "bg-white",
     icon: (
       <svg viewBox="0 0 48 48" className="w-11 h-11 sm:w-13 sm:h-13" fill="none">
@@ -77,7 +77,7 @@ const categories: Category[] = [
   },
   {
     id: 3,
-    name: "Snacks & Fries",
+    name: "Snacks y patatas",
     circleBg: "bg-[#FF9F1C]",
     icon: (
       <svg viewBox="0 0 48 48" className="w-11 h-11 sm:w-13 sm:h-13" fill="none">
@@ -108,7 +108,7 @@ const categories: Category[] = [
   },
   {
     id: 4,
-    name: "Shakes & Drinks",
+    name: "Batidos y bebidas",
     circleBg: "bg-[#FFAEC9]",
     icon: (
       <svg viewBox="0 0 48 48" className="w-11 h-11 sm:w-13 sm:h-13" fill="none">
@@ -143,7 +143,7 @@ const categories: Category[] = [
   },
   {
     id: 5,
-    name: "Bakery",
+    name: "Repostería",
     circleBg: "bg-white",
     icon: (
       <svg viewBox="0 0 48 48" className="w-11 h-11 sm:w-13 sm:h-13" fill="none">
@@ -179,7 +179,7 @@ const categories: Category[] = [
   },
   {
     id: 6,
-    name: "Combo Deals",
+    name: "Combos",
     circleBg: "bg-[#FF9F1C]",
     icon: (
       <svg viewBox="0 0 48 48" className="w-11 h-11 sm:w-13 sm:h-13" fill="none">
@@ -274,7 +274,7 @@ export default function Categories() {
           {/* Right Arrow button aligned right beside Combo Deals */}
           <div className="flex flex-col items-center justify-center flex-shrink-0 -mt-5 pl-1">
             <button
-              aria-label="Next categories"
+              aria-label="Siguientes categorías"
               className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/50 hover:border-white hover:bg-white/10 text-white flex items-center justify-center transition-all duration-200 group focus:outline-none"
             >
               <svg

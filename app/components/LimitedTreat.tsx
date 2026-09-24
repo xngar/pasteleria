@@ -3,39 +3,39 @@ import Image from "next/image";
 const treats = [
   {
     id: 1,
-    name: "Choco Lava Cake",
+    name: "Tarta de lava de chocolate",
     image: "/treat_1.png",
   },
   {
     id: 2,
-    name: "Strawberry Bliss Shake",
+    name: "Batido de fresas Bliss",
     image: "/treat_2.png",
   },
   {
     id: 3,
-    name: "Caramel Popcorn Sundae",
+    name: "Sundae de palomitas de caramelo",
     image: "/treat_3.png",
   },
 ];
 
 export default function LimitedTreat() {
   return (
-    <section className="bg-[#FFF0E8] px-4 sm:px-6 pb-10">
+    <section id="ofertas" className="bg-[#FFF0E8] px-4 sm:px-6 pb-10 scroll-mt-16">
       <div className="container mx-auto max-w-6xl">
         <div className="bg-[#FF9F1C] rounded-[32px] px-6 py-6 sm:px-8 sm:py-8 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-md relative overflow-hidden">
           {/* Left content */}
           <div className="flex-1 text-center lg:text-left z-10">
             <div className="flex items-center justify-center lg:justify-start gap-2 mb-2">
               <h3 className="font-extrabold italic text-2xl sm:text-3xl lg:text-4xl text-[#2C1810] leading-tight font-serif">
-                Limited Time Treats!
+                ¡Caprichos por tiempo limitado!
               </h3>
               <span className="text-amber-600 text-2xl font-bold">⚡</span>
             </div>
             <p className="text-[#3E2318] font-medium text-sm sm:text-base leading-relaxed mb-6 max-w-sm mx-auto lg:mx-0">
-              Don&apos;t miss our exclusive delicious creations.
+              No te pierdas nuestras creaciones exclusivas y deliciosas.
             </p>
             <button className="bg-[#2C1810] hover:bg-[#1A0E0A] transition-all duration-200 text-white font-bold text-xs sm:text-sm tracking-widest uppercase px-8 py-3.5 rounded-full shadow-lg hover:scale-105">
-              EXPLORE NOW
+              EXPLORAR AHORA
             </button>
           </div>
 

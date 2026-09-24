@@ -46,3 +46,47 @@ body {
 .font-caveat {
   font-family: var(--font-caveat), 'Caveat', cursive !important;
 }
+
+/* Heart-shaped back-to-top button (square + two circles, rotated 45deg) */
+.heart-btn {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  background-color: #ff2d7a;
+  transform: rotate(45deg);
+  box-shadow: 0 10px 25px rgba(255, 45, 122, 0.45);
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+.heart-btn::before,
+.heart-btn::after {
+  content: "";
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: inherit;
+}
+.heart-btn::before {
+  top: -21px;
+  left: 0;
+}
+.heart-btn::after {
+  top: 0;
+  left: -21px;
+}
+.heart-btn:hover {
+  transform: rotate(45deg) scale(1.08);
+  filter: brightness(1.08);
+}
+.heart-btn:focus-visible {
+  outline: 3px solid #ff2d7a;
+  outline-offset: 4px;
+}
+.heart-arrow {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}

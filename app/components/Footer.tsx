@@ -9,7 +9,7 @@ export default function Footer() {
               <h2 className="font-extrabold text-2xl sm:text-3xl italic font-serif flex items-center">
                 Treato<span className="text-[#FF2D7A] text-xl ml-1">♡</span>
               </h2>
-              <p className="text-gray-400 text-xs sm:text-sm mt-1">Little treats. Big smiles.</p>
+              <p className="text-gray-400 text-xs sm:text-sm mt-1">Pequeños caprichos. Grandes sonrisas.</p>
             </div>
             {/* Social Icons */}
             <div className="flex gap-2.5">
@@ -42,12 +42,18 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-sm sm:text-base mb-3 text-white">Quick Links</h4>
+            <h4 className="font-bold text-sm sm:text-base mb-3 text-white">Enlaces rápidos</h4>
             <ul className="space-y-1.5">
-              {["Home", "Menu", "Offers", "My Orders", "Track Order"].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-gray-300 hover:text-[#FF2D7A] transition-colors text-xs sm:text-sm">
-                    {link}
+              {[
+                { label: "Inicio", href: "#inicio" },
+                { label: "Menú", href: "#menu" },
+                { label: "Combos", href: "#combos" },
+                { label: "Ofertas", href: "#ofertas" },
+                { label: "Opiniones", href: "#opiniones" },
+              ].map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-gray-300 hover:text-[#FF2D7A] transition-colors text-xs sm:text-sm">
+                    {link.label}
                   </a>
                 </li>
               ))}
@@ -56,9 +62,9 @@ export default function Footer() {
 
           {/* Help */}
           <div>
-            <h4 className="font-bold text-sm sm:text-base mb-3 text-white">Help</h4>
+            <h4 className="font-bold text-sm sm:text-base mb-3 text-white">Ayuda</h4>
             <ul className="space-y-1.5">
-              {["FAQs", "Delivery Info", "Returns", "Contact Us"].map((link) => (
+              {["Preguntas frecuentes", "Información de reparto", "Devoluciones", "Contáctanos"].map((link) => (
                 <li key={link}>
                   <a href="#" className="text-gray-300 hover:text-[#FF2D7A] transition-colors text-xs sm:text-sm">
                     {link}
@@ -70,9 +76,9 @@ export default function Footer() {
 
           {/* Download App Pink Card matching dis.jpg */}
           <div className="bg-[#FF2D7A] rounded-2xl p-4 sm:p-5 text-white shadow-lg">
-            <h4 className="font-extrabold text-sm sm:text-base mb-1">Download Our App</h4>
+            <h4 className="font-extrabold text-sm sm:text-base mb-1">Descarga nuestra app</h4>
             <p className="text-pink-100 text-xs mb-3">
-              More treats, more rewards!
+              ¡Más caprichos, más recompensas!
             </p>
             <div className="flex items-center gap-3">
               {/* Google Play */}

@@ -9,7 +9,7 @@ const customerReviews = [
 
 export default function LoyaltyAndReviews() {
   return (
-    <section className="bg-[#FFF0E8] px-4 sm:px-6 pb-12">
+    <section id="opiniones" className="bg-[#FFF0E8] px-4 sm:px-6 pb-12 scroll-mt-16">
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           {/* Left Side: Loyalty Card (5 cols) */}
@@ -18,15 +18,15 @@ export default function LoyaltyAndReviews() {
             <div className="text-white z-10 flex-1">
               <div className="flex items-center gap-1.5 mb-1.5">
                 <h3 className="font-extrabold italic text-2xl sm:text-3xl leading-none font-serif">
-                  Loyalty That<br />Tastes Better
+                  Fidelidad que<br />sabe mejor
                 </h3>
                 <span className="text-xl -mt-4">👑</span>
               </div>
               <p className="text-pink-100 text-xs sm:text-sm font-medium leading-relaxed mb-4">
-                Earn points on every order<br />and unlock yummy rewards!
+                Gana puntos en cada pedido<br />y desbloquea premios deliciosos.
               </p>
               <button className="bg-[#2C1810] hover:bg-[#1A0E0A] transition-all duration-200 text-white font-bold text-xs tracking-wider uppercase px-6 py-2.5 rounded-full shadow-md hover:scale-105">
-                JOIN &amp; EARN
+                ÚNETE Y GANA
               </button>
             </div>
 
@@ -34,7 +34,7 @@ export default function LoyaltyAndReviews() {
             <div className="relative w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0 z-10">
               <Image
                 src="/loyalty_chest.png"
-                alt="Loyalty rewards chest"
+                alt="Cofre de recompensas de fidelidad"
                 fill
                 sizes="140px"
                 className="object-contain"
@@ -48,7 +48,7 @@ export default function LoyaltyAndReviews() {
             <div className="flex items-center justify-center lg:justify-start gap-2 mb-3">
               <span className="text-amber-400 text-base font-bold">✦</span>
               <h3 className="text-[#2C1810] font-extrabold text-lg sm:text-xl font-serif italic">
-                Loved by Our Treat Lovers
+Amados por nuestros golosos
               </h3>
               <span className="text-pink-500 text-base font-bold">✦</span>
             </div>
@@ -62,7 +62,7 @@ export default function LoyaltyAndReviews() {
                 >
                   <Image
                     src={review.image}
-                    alt={`Treato Customer review ${review.id}`}
+                    alt={`Cliente de Treato ${review.id}`}
                     fill
                     sizes="120px"
                     className="object-cover"
@@ -72,7 +72,7 @@ export default function LoyaltyAndReviews() {
             </div>
 
             <p className="text-[#E91E8C] font-semibold text-xs text-center lg:text-right mt-2 font-nunito">
-              More treats, more smiles! ♡
+              ¡Más caprichos, más sonrisas! ♡
             </p>
           </div>
         </div>

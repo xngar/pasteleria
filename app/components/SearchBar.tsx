@@ -2,7 +2,7 @@
 
 export default function SearchBar() {
   return (
-    <section className="bg-gradient-to-b from-[#FFF0E8] to-[#FFA8BF] pt-2 pb-6 px-4 sm:px-6 relative z-10">
+    <section id="menu" className="bg-gradient-to-b from-[#FFF0E8] to-[#FFA8BF] pt-2 pb-6 px-4 sm:px-6 relative z-10 scroll-mt-16">
       <div className="container mx-auto max-w-xl">
         <div className="relative flex items-center bg-white rounded-full shadow-md hover:shadow-lg transition-shadow p-1 pl-5">
           {/* Search Icon */}
@@ -26,13 +26,13 @@ export default function SearchBar() {
           {/* Input */}
           <input
             type="text"
-            placeholder="Search for burgers, shakes, desserts..."
+            placeholder="Busca hamburguesas, batidos, postres..."
             className="flex-1 py-2.5 text-gray-700 text-xs sm:text-sm font-medium outline-none bg-transparent placeholder:text-gray-400 placeholder:font-normal"
           />
 
           {/* Filter Button */}
           <button
-            aria-label="Filter"
+            aria-label="Filtros"
             className="w-10 h-10 bg-[#E91E8C] hover:bg-[#D81B60] transition-colors flex items-center justify-center rounded-full shadow flex-shrink-0"
           >
             <svg

@@ -11,8 +11,8 @@ const features = [
         <path d="M8 20 L15 20" stroke="white" strokeWidth="2.2" />
       </svg>
     ),
-    title: "Fast Delivery",
-    subtitle: "On time, every time",
+    title: "Entrega rápida",
+    subtitle: "A tiempo, siempre",
   },
   {
     id: 2,
@@ -24,8 +24,8 @@ const features = [
         <rect x="10" y="22" width="8" height="3" rx="1" fill="white" />
       </svg>
     ),
-    title: "Easy Payments",
-    subtitle: "Secure & simple",
+    title: "Pagos fáciles",
+    subtitle: "Seguros y sencillos",
   },
   {
     id: 3,
@@ -37,8 +37,8 @@ const features = [
         <path d="M26 8 L32 8 L32 14" stroke="white" strokeWidth="2.2" />
       </svg>
     ),
-    title: "Best Offers",
-    subtitle: "Deals you'll love",
+    title: "Mejores ofertas",
+    subtitle: "Ofertas que te encantarán",
   },
   {
     id: 4,
@@ -51,8 +51,8 @@ const features = [
         <path d="M30 26 C30 30 26 32 20 32" stroke="white" strokeWidth="2.2" fill="none" />
       </svg>
     ),
-    title: "24/7 Support",
-    subtitle: "We're here always",
+    title: "Soporte 24/7",
+    subtitle: "Siempre aquí para ti",
   },
 ];
 

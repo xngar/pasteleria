@@ -7,6 +7,7 @@ import LimitedTreat from "./components/LimitedTreat";
 import LoyaltyAndReviews from "./components/LoyaltyAndReviews";
 import FeaturesBar from "./components/FeaturesBar";
 import Footer from "./components/Footer";
+import BackToTop from "./components/BackToTop";
 
 export default function Home() {
   return (
@@ -37,6 +38,9 @@ export default function Home() {
 
       {/* Footeer */}
       <Footer />
+
+      {/* Back to top heart button */}
+      <BackToTop />
     </main>
   );
 }

@@ -8,23 +8,29 @@ export default function Hero() {
   const [reduceMotion, setReduceMotion] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReduceMotion(mq.matches);
-    const handler = (e: MediaQueryListEvent) => setReduceMotion(e.matches);
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
+    const update = () => setReduceMotion(mq.matches);
+    mq.addEventListener("change", update);
+    const raf = requestAnimationFrame(() => {
+      setReduceMotion(mq.matches);
+      setMounted(true);
+    });
+    return () => {
+      mq.removeEventListener("change", update);
+      cancelAnimationFrame(raf);
+    };
   }, []);
 
   const transitionClass = reduceMotion
     ? "transition-none"
     : "transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]";
 
-  const staggerDelay = (index: number) => reduceMotion ? 0 : index * 100;
+  const staggerDelay = (index: number) => (reduceMotion ? 0 : index * 100);
 
   return (
     <section
-      className="relative overflow-hidden bg-[var(--cream)] select-none flex flex-col min-h-svh"
+      id="inicio"
+      className="relative overflow-hidden bg-[var(--cream)] select-none flex flex-col min-h-svh scroll-mt-0"
       style={{
         "--cream": "#FFF8F0",
         "--mint": "#A8E6CF",
@@ -66,16 +72,16 @@ export default function Hero() {
       {/* Floating flavor badges over the photo (desktop) */}
       <div className="hidden lg:flex absolute right-8 xl:right-16 top-1/2 -translate-y-1/2 z-20 flex-col items-end gap-3 pointer-events-none" aria-hidden="true">
         <span className="bg-white/90 backdrop-blur-sm text-[var(--chocolate)] text-sm font-bold px-4 py-2 rounded-full shadow-lg ring-1 ring-[var(--cream)] rotate-[4deg]">
-          Strawberry Swirl
+          Remolino de fresa
         </span>
         <span className="bg-white/90 backdrop-blur-sm text-[var(--chocolate)] text-sm font-bold px-4 py-2 rounded-full shadow-lg ring-1 ring-[var(--cream)] -rotate-3">
-          Mint Chip
+          Menta con pepitas
         </span>
         <span className="bg-white/90 backdrop-blur-sm text-[var(--chocolate)] text-sm font-bold px-4 py-2 rounded-full shadow-lg ring-1 ring-[var(--cream)] rotate-2">
-          Salted Caramel
+          Caramelo salado
         </span>
         <span className="bg-white/90 backdrop-blur-sm text-[var(--chocolate)] text-sm font-bold px-4 py-2 rounded-full shadow-lg ring-1 ring-[var(--cream)] -rotate-2">
-          Vanilla Bean
+          Vainilla
         </span>
       </div>
 
@@ -99,7 +105,7 @@ export default function Hero() {
           {/* Typography & CTA - over the image, visible on the cream side */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-xl z-20 w-full mx-auto lg:mx-0">
             {/* Headline Group - big, impactful, but fits on screen */}
-            <div className="flex flex-col items-center lg:items-start justify-center gap-0.5 mb-4" role="heading" aria-level={1} id="hero-title">
+            <div className="flex flex-col items-center lg:items-start justify-center gap-0.5 mb-4">
               {/* Eyebrow badge - friendly signal */}
               <div
                 className={`${transitionClass} mb-2.5 flex items-center gap-2 bg-white/60 backdrop-blur-sm text-[var(--cherry)] text-[11px] sm:text-xs font-extrabold uppercase tracking-[0.22em] px-3.5 py-1.5 rounded-full ring-1 ring-[var(--rose)]/40 shadow-sm`}
@@ -110,7 +116,7 @@ export default function Hero() {
                 }}
               >
                 <span aria-hidden="true">✦</span>
-                Hand-scooped &amp; made fresh daily
+                Bola a mano y fresca a diario
               </div>
 
               {/* Line 1 - script */}
@@ -122,8 +128,11 @@ export default function Hero() {
                   transitionDelay: `${staggerDelay(1)}ms`,
                 }}
               >
-                <h1 className="font-script text-[var(--cherry)] text-[36px] sm:text-5xl md:text-[58px] lg:text-[66px] xl:text-[74px] leading-[1.08] tracking-wide drop-shadow-[0_2px_10px_rgba(214,64,69,0.28)] text-center lg:text-left">
-                  Here, happiness
+                <h1
+                  id="hero-title"
+                  className="font-script text-[var(--cherry)] text-[36px] sm:text-5xl md:text-[58px] lg:text-[66px] xl:text-[74px] leading-[1.08] tracking-wide drop-shadow-[0_2px_10px_rgba(214,64,69,0.28)] text-center lg:text-left"
+                >
+                  Aquí, la felicidad
                 </h1>
               </div>
 
@@ -137,7 +146,7 @@ export default function Hero() {
                 }}
               >
                 <span className="text-[var(--chocolate)] font-black italic text-[54px] sm:text-[76px] md:text-[92px] lg:text-[106px] xl:text-[118px] leading-[0.92] font-serif tracking-tight select-none block text-center lg:text-left">
-                  MELTS
+                  SE DERRITE
                 </span>
                 {/* Melting drips underline - the ice cream anchor */}
                 <svg
@@ -171,7 +180,7 @@ export default function Hero() {
                 }}
               >
                 <h2 className="font-script text-[var(--cherry)] text-[36px] sm:text-5xl md:text-[58px] lg:text-[66px] xl:text-[74px] leading-[1.12] tracking-wide drop-shadow-[0_2px_10px_rgba(214,64,69,0.28)] text-center lg:text-left">
-                  into every scoop.{" "}
+                  en cada bola.{" "}
                   <span className="text-[var(--rose)] text-3xl sm:text-4xl lg:text-5xl inline-block -rotate-12 translate-y-1" aria-hidden="true">
                     ♡
                   </span>
@@ -188,9 +197,9 @@ export default function Hero() {
                 transitionDelay: `${staggerDelay(4)}ms`,
               }}
             >
-              Real ingredients. Real flavors. Real smiles.
+              Ingredientes reales. Sabores reales. Sonrisas reales.
               <br />
-              Delivered cold, straight to your door.
+              Reparto en frío, directo a tu puerta.
             </p>
 
             {/* CTA Button - warm, inviting, bigger */}
@@ -205,9 +214,9 @@ export default function Hero() {
               <div className="flex items-center gap-3 flex-wrap justify-center lg:justify-start">
                 <button
                   className="group relative inline-flex items-center gap-2.5 bg-[var(--cherry)] hover:bg-[var(--cherry)] text-white font-extrabold text-sm sm:text-base tracking-widest uppercase px-7 py-3.5 rounded-full shadow-[0_10px_28px_rgba(214,64,69,0.4)] hover:shadow-[0_14px_38px_rgba(214,64,69,0.5)] hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--cherry-soft)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--cream)] active:scale-[0.98] transition-all duration-150 ease-out"
-                  aria-label="Order your ice cream treats now"
+                  aria-label="Pide tus helados y caprichos ahora"
                 >
-                  <span>Order Now</span>
+                  <span>Pedir ahora</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-150"
@@ -226,13 +235,13 @@ export default function Hero() {
                 {/* Secondary subtle CTA */}
                 <button
                   className="hidden sm:inline-flex items-center gap-1.5 text-[var(--chocolate-light)] hover:text-[var(--chocolate)] font-semibold text-sm sm:text-base transition-colors duration-150"
-                  aria-label="View all flavors"
+                  aria-label="Ver todos los sabores"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                   </svg>
-                  Explore Flavors
+                  Explorar sabores
                 </button>
               </div>
 
@@ -240,12 +249,12 @@ export default function Hero() {
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-2">
                 <span className="inline-flex items-center gap-1.5 text-[var(--chocolate-light)] text-xs sm:text-sm font-semibold">
                   <span className="text-[#F5A623] text-sm" aria-hidden="true">★</span>
-                  4.9 · 2,400+ happy scoops
+                  4.9 · +2.400 bolas felices
                 </span>
                 <span className="w-1 h-1 rounded-full bg-[var(--rose)]" aria-hidden="true" />
                 <span className="inline-flex items-center gap-1.5 text-[var(--chocolate-light)] text-xs sm:text-sm font-semibold">
                   <span className="text-[#A8E6CF] text-sm" aria-hidden="true">✦</span>
-                  Vegan &amp; lactose-free options
+                  Opciones veganas y sin lactosa
                 </span>
               </div>
             </div>

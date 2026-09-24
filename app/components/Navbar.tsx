@@ -3,11 +3,11 @@
 import { useEffect, useState } from "react";
 
 const MENU_LINKS = [
-  { label: "Home", href: "#" },
-  { label: "Menu", href: "#" },
-  { label: "Offers", href: "#" },
-  { label: "My Orders", href: "#" },
-  { label: "Track Order", href: "#" },
+  { label: "Inicio", href: "#inicio" },
+  { label: "Menú", href: "#menu" },
+  { label: "Combos", href: "#combos" },
+  { label: "Ofertas", href: "#ofertas" },
+  { label: "Opiniones", href: "#opiniones" },
 ];
 
 export default function Navbar() {
@@ -30,35 +30,36 @@ export default function Navbar() {
         {/* Hamburger Menu Button - mobile only */}
         <button
           className="flex flex-col justify-center items-center w-10 h-10 bg-[#2C1810] hover:bg-[#1A0E0A] transition-colors rounded-xl gap-1.5 shadow-md cursor-pointer md:hidden"
-          aria-label={menuOpen ? "Close Menu" : "Open Menu"}
+          aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
           onClick={() => setMenuOpen((open) => !open)}
         >
           <span
-            className={`block w-5 h-0.5 bg-white rounded-full transition-all duration-200 ${
-              menuOpen ? "translate-y-2 rotate-45" : ""
-            }`}
+            className={`block w-5 h-0.5 bg-white rounded-full transition-all duration-200 ${menuOpen ? "translate-y-2 rotate-45" : ""
+              }`}
           ></span>
           <span
-            className={`block w-5 h-0.5 bg-white rounded-full transition-all duration-200 ${
-              menuOpen ? "opacity-0" : ""
-            }`}
+            className={`block w-5 h-0.5 bg-white rounded-full transition-all duration-200 ${menuOpen ? "opacity-0" : ""
+              }`}
           ></span>
           <span
-            className={`block w-5 h-0.5 bg-white rounded-full transition-all duration-200 ${
-              menuOpen ? "-translate-y-2 -rotate-45" : ""
-            }`}
+            className={`block w-5 h-0.5 bg-white rounded-full transition-all duration-200 ${menuOpen ? "-translate-y-2 -rotate-45" : ""
+              }`}
           ></span>
         </button>
 
         {/* Logo - perfectly centered regardless of side widths */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center flex flex-col items-center pointer-events-none">
-          <h1 className="font-script text-[#2C1810] text-3xl sm:text-4xl lg:text-[42px] leading-none flex items-center">
+          <a
+            href="#inicio"
+            className="font-script text-[#2C1810] text-3xl sm:text-4xl lg:text-[42px] leading-none flex items-center"
+            aria-label="Treato – volver al inicio"
+          >
             Treato<span className="text-[#FF2D7A] text-2xl sm:text-3xl lg:text-[30px] ml-1">♥</span>
-          </h1>
+          </a>
           <p className="text-[#2C1810] text-[8px] sm:text-[10px] font-black tracking-[0.28em] uppercase mt-1 font-nunito">
-            SWEET • SAVORY • SMILES
+            DULCE • SALADO • SONRISAS
           </p>
         </div>
 
@@ -66,7 +67,7 @@ export default function Navbar() {
         <div className="relative">
           <button
             className="flex items-center justify-center w-10 h-10 lg:w-11 lg:h-11 bg-[#2C1810] hover:bg-[#1A0E0A] transition-colors rounded-xl shadow-md cursor-pointer"
-            aria-label="Shopping Cart"
+            aria-label="Carrito de compras"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +95,7 @@ export default function Navbar() {
       {/* Row 2: nav links centered below the logo (desktop only) */}
       <nav
         className="hidden md:flex items-center justify-center gap-7 lg:gap-9 border-t border-[#2C1810]/10 py-2 mx-4 sm:mx-8"
-        aria-label="Main navigation"
+        aria-label="Navegación principal"
       >
         {MENU_LINKS.map((link) => (
           <a
@@ -119,13 +120,12 @@ export default function Navbar() {
       {/* Mobile dropdown menu */}
       <div
         id="mobile-menu"
-        className={`absolute top-full left-3 right-3 mt-2 z-50 md:hidden bg-[#2C1810] rounded-2xl shadow-2xl overflow-hidden transition-all duration-200 ease-out ${
-          menuOpen
-            ? "opacity-100 translate-y-0 pointer-events-auto"
-            : "opacity-0 -translate-y-2 pointer-events-none"
-        }`}
+        className={`absolute top-full left-3 right-3 mt-2 z-50 md:hidden bg-[#2C1810] rounded-2xl shadow-2xl overflow-hidden transition-all duration-200 ease-out ${menuOpen
+            ? "opacity-100 visible translate-y-0 pointer-events-auto"
+            : "opacity-0 invisible -translate-y-2 pointer-events-none"
+          }`}
       >
-        <nav className="p-3 flex flex-col" aria-label="Mobile navigation">
+        <nav className="p-3 flex flex-col" aria-label="Navegación móvil">
           {MENU_LINKS.map((link) => (
             <a
               key={link.label}
