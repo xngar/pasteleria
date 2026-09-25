@@ -1,0 +1,290 @@
+{
+  "seccion": {
+    "titulo": "Combos de sabores",
+    "subtitulo": "Combinaciones de sabores elegidas una a una por nuestro equipo",
+    "ariaAnterior": "Combos anteriores",
+    "ariaSiguiente": "Combos siguientes"
+  },
+  "combos": [
+    {
+      "id": 1,
+      "slug": "copa-fusion-tropical",
+      "nombre": "Copa Fusión Tropical",
+      "categoria": "Copa",
+      "formato": "Copa de cristal 350 ml",
+      "precio": "$8.99",
+      "precioAnterior": "$10.49",
+      "etiquetas": ["Más vendido"],
+      "descripcion": "Mango, coco y frutos rojos con coulis de frambuesa y piña caramelizada.",
+      "descripcionDetallada": "Tres bochas de helado artesanal montadas en copa de cristal bien fría y terminadas con coulis de frambuesa hecho esa misma mañana. Encima, piña caramelizada en sartén, coco rallado tostado y una pizca de sal marina que hace que todos los sabores afloren. Es el combo que más repiten los clientes cuando aprieta el calor de Madrid.",
+      "sabores": [
+        { "nombre": "Mango", "color": "#F7A93B" },
+        { "nombre": "Coco", "color": "#F3E7C9" },
+        { "nombre": "Frutos rojos", "color": "#E23E57" }
+      ],
+      "incluye": [
+        "3 bochas de helado artesanal",
+        "Coulis de frambuesa artesanal",
+        "Piña caramelizada",
+        "Coco rallado tostado"
+      ],
+      "alergenos": ["Leche", "Frutos secos"],
+      "calorias": 420,
+      "valoracion": 4.9,
+      "resenas": 218,
+      "arte": {
+        "variante": "copa",
+        "fondo": "#FFE7C4",
+        "taza": "#FFF6EC",
+        "sirope": "#C2185B",
+        "chispas": ["#FFEB3B", "#00E5FF", "#FFFFFF"],
+        "adorno": "cereza"
+      }
+    },
+    {
+      "id": 2,
+      "slug": "tarrina-cookie-dream",
+      "nombre": "Tarrina Cookie Dream",
+      "categoria": "Tarrina",
+      "formato": "Tarrina 500 ml",
+      "precio": "$9.49",
+      "precioAnterior": null,
+      "etiquetas": ["Favorito de la casa"],
+      "descripcion": "Galleta casera, vainilla bourbon y chocolate blanco templado.",
+      "descripcionDetallada": "Nuestra galleta se hornea cada mañana con pepitas de chocolate negro y se tritura en crudo para que la textura sea troceada y no cremosa. Encima se viste con helado de vainilla bourbon y una capa fina de chocolate blanco templado que cae en cascada al primer sorbo. Se sirve con cuchara de madera y dos galletitas extra de regalo.",
+      "sabores": [
+        { "nombre": "Galleta", "color": "#C98A5B" },
+        { "nombre": "Vainilla", "color": "#F6E3B8" },
+        { "nombre": "Chocolate blanco", "color": "#EFDCC2" }
+      ],
+      "incluye": [
+        "500 ml de helado artesanal",
+        "Sirope de chocolate blanco templado",
+        "Trozos de galleta casera",
+        "Cuchara de madera biodegradable"
+      ],
+      "alergenos": ["Leche", "Gluten", "Huevo", "Soja"],
+      "calorias": 510,
+      "valoracion": 4.8,
+      "resenas": 174,
+      "arte": {
+        "variante": "tarrina",
+        "fondo": "#F3E4CE",
+        "taza": "#FFFDF8",
+        "sirope": "#8D5A3B",
+        "chispas": ["#5D4037", "#E8D5B7", "#FFFFFF"],
+        "adorno": "oblea"
+      }
+    },
+    {
+      "id": 3,
+      "slug": "cono-canela-naranja",
+      "nombre": "Cono Canela y Naranja",
+      "categoria": "Cono",
+      "formato": "Cono de oblea + 2 bochas",
+      "precio": "$6.99",
+      "precioAnterior": null,
+      "etiquetas": ["Mejor precio"],
+      "descripcion": "Naranja, canela y vainilla en cono de oblea recién horneado.",
+      "descripcionDetallada": "La oblea se hornea en el obrador a las ocho de la mañana y llega al mostrador antes de las diez, por eso siempre cruje. Lleva dos bochas de helado artesanal: una de naranja natural con ralladura de naranja y otra de canela de Ceilán. Si lo pides para llevar te lo envolvemos en papel de estraza con tenedor y servilleta, sin sobrecoste.",
+      "sabores": [
+        { "nombre": "Naranja", "color": "#FF8A3D" },
+        { "nombre": "Canela", "color": "#C97B3C" },
+        { "nombre": "Vainilla", "color": "#FBEBC8" }
+      ],
+      "incluye": [
+        "Cono de oblea horneado hoy",
+        "2 bochas de helado artesanal",
+        "Ralladura de naranja natural",
+        "Envoltorio de papel para llevar"
+      ],
+      "alergenos": ["Gluten", "Leche", "Huevo"],
+      "calorias": 330,
+      "valoracion": 4.7,
+      "resenas": 143,
+      "arte": {
+        "variante": "cono",
+        "fondo": "#FFE3C6",
+        "taza": "#E3A857",
+        "sirope": "#E86A17",
+        "chispas": ["#FFFFFF", "#FFD180", "#C62828"],
+        "adorno": "gajo"
+      }
+    },
+    {
+      "id": 4,
+      "slug": "sundae-cafe-affogato",
+      "nombre": "Sundae Café Affogato",
+      "categoria": "Sundae",
+      "formato": "Copa de cristal 300 ml",
+      "precio": "$9.99",
+      "precioAnterior": null,
+      "etiquetas": ["Nuevo"],
+      "descripcion": "Helado de stracciatella con café espresso recién hecho.",
+      "descripcionDetallada": "Empezamos con stracciatella artesanal, chocolate negro en trozos pequeños dentro de la mezcla. Encima servimos café espresso de tueste medio, recién hecho, para que el calor derrita la primera capa y el contraste de temperatura sea el protagonista. Remueve tú mismo: el café y el helado se mezclan justo delante del plato.",
+      "sabores": [
+        { "nombre": "Café espresso", "color": "#6F4A2E" },
+        { "nombre": "Vainilla", "color": "#F3E2BB" },
+        { "nombre": "Stracciatella", "color": "#EFDCC3" }
+      ],
+      "incluye": [
+        "2 bochas de helado artesanal",
+        "Doble espresso de tueste medio",
+        "Virutas de chocolate 70%",
+        "Cuchara y servilleta de papel"
+      ],
+      "alergenos": ["Leche", "Soja"],
+      "calorias": 290,
+      "valoracion": 4.9,
+      "resenas": 96,
+      "arte": {
+        "variante": "copa",
+        "fondo": "#EADCC8",
+        "taza": "#FFFFFF",
+        "sirope": "#3E2318",
+        "chispas": ["#D7CCC8", "#8D6E63", "#FFFFFF"],
+        "adorno": "grano"
+      }
+    },
+    {
+      "id": 5,
+      "slug": "copa-pistacho-avellana",
+      "nombre": "Copa Pistacho y Avellana",
+      "categoria": "Copa",
+      "formato": "Copa de cristal 350 ml",
+      "precio": "$11.49",
+      "precioAnterior": null,
+      "etiquetas": ["Premium"],
+      "descripcion": "Pistacho siciliano, avellana tostada y chocolate blanco.",
+      "descripcionDetallada": "El pistacho es de Bronte y se tuesta en casa, no compramos crema: por eso tiene ese verde intenso y ese sabor limpio que no empalaga. La avellana se carameliza con azúcar mascabado hasta quedar tipo praliné, y el chocolate blanco fundido corona la copa. Reserva una hora de deshielo en el congelador de casa si la vas a guardar.",
+      "sabores": [
+        { "nombre": "Pistacho", "color": "#A8C66C" },
+        { "nombre": "Avellana", "color": "#D9A566" },
+        { "nombre": "Chocolate blanco", "color": "#F2E3CB" }
+      ],
+      "incluye": [
+        "3 bochas de helado artesanal",
+        "Praliné de avellana caramelizada",
+        "Pistacho triturado de Bronte",
+        "Chocolate blanco fundido"
+      ],
+      "alergenos": ["Leche", "Frutos secos", "Soja"],
+      "calorias": 560,
+      "valoracion": 5.0,
+      "resenas": 121,
+      "arte": {
+        "variante": "copa",
+        "fondo": "#E6F1D6",
+        "taza": "#FFFFFF",
+        "sirope": "#6B8E23",
+        "chispas": ["#D7CCC8", "#A8C66C", "#FFFFFF"],
+        "adorno": "nuez"
+      }
+    },
+    {
+      "id": 6,
+      "slug": "vaso-batido-fresa-vainilla",
+      "nombre": "Vaso Batido de Fresa",
+      "categoria": "Vaso",
+      "formato": "Vaso 400 ml con pajita",
+      "precio": "$8.49",
+      "precioAnterior": null,
+      "etiquetas": [],
+      "descripcion": "Fresa, vainilla y crema batida con fresas frescas troceadas.",
+      "descripcionDetallada": "Trituramos helado de fresa y vainilla a mano, sin polvos ni siropes industriales, y lo terminamos con un montoncito de nata batida. Las fresas que aparecen arriba están troceadas esa misma mañana: unas veces caen más grandes y otras más finas, y por eso dos vasos nunca saben iguales. Perfecto para comer con cuchara en la terraza o para llevar al cine.",
+      "sabores": [
+        { "nombre": "Fresa", "color": "#FF6B8A" },
+        { "nombre": "Vainilla", "color": "#FDEBCB" },
+        { "nombre": "Nata", "color": "#FFF7E6" }
+      ],
+      "incluye": [
+        "400 ml de batido artesanal",
+        "Nata batida montada a mano",
+        "Fresas frescas troceadas",
+        "Pajita y tapa compostable"
+      ],
+      "alergenos": ["Leche"],
+      "calorias": 380,
+      "valoracion": 4.6,
+      "resenas": 88,
+      "arte": {
+        "variante": "vaso",
+        "fondo": "#FFE1E9",
+        "taza": "#FFFFFF",
+        "sirope": "#E11D48",
+        "chispas": ["#FFFFFF", "#FFB3C6", "#FFD54F"],
+        "adorno": "fresa"
+      }
+    },
+    {
+      "id": 7,
+      "slug": "tarrina-limon-menta",
+      "nombre": "Tarrina Limón y Menta",
+      "categoria": "Tarrina",
+      "formato": "Tarrina 500 ml",
+      "precio": "$7.99",
+      "precioAnterior": "$9.29",
+      "etiquetas": ["Oferta"],
+      "descripcion": "Limón siciliano, menta fresca y trocitos de chocolate amargo.",
+      "descripcionDetallada": "Exprimimos limón siciliano cada mañana y lo mezclamos con la base de helado, así que el ácido se nota de verdad. La menta es fresca del mercado: la infusionamos en leche antes de fabricar la base y luego la terminamos con menta fresca. Por encima caen trozos de chocolate amargo 70% que se rompen con la cuchara y contrastan con el limón.",
+      "sabores": [
+        { "nombre": "Limón siciliano", "color": "#FFE066" },
+        { "nombre": "Menta fresca", "color": "#7ED9A7" },
+        { "nombre": "Chocolate amargo", "color": "#4A2C17" }
+      ],
+      "incluye": [
+        "500 ml de helado artesanal",
+        "Limón siciliano exprimido a diario",
+        "Infusión de menta fresca",
+        "Trozos de chocolate 70%"
+      ],
+      "alergenos": ["Leche", "Soja"],
+      "calorias": 400,
+      "valoracion": 4.7,
+      "resenas": 132,
+      "arte": {
+        "variante": "tarrina",
+        "fondo": "#E4F5E8",
+        "taza": "#FFFFFF",
+        "sirope": "#2F6B4F",
+        "chispas": ["#4A2C17", "#A5D6A7", "#FFFFFF"],
+        "adorno": "hoja"
+      }
+    },
+    {
+      "id": 8,
+      "slug": "tarrina-mix-vegano-avena",
+      "nombre": "Tarrina Mix Vegano",
+      "categoria": "Tarrina",
+      "formato": "Tarrina 500 ml",
+      "precio": "$10.49",
+      "precioAnterior": null,
+      "etiquetas": ["Vegano", "Sin lactosa"],
+      "descripcion": "Avena, coco y frambuesa con base de leche de almendra.",
+      "descripcionDetallada": "Elaboramos la base en nuestra cocina, sin nata ni leche animal, para que los ingredientes se lean igual que en la carta. Lleva coco, el sabor mas difícil de conseguir, con coco fresco gratinado y frambuesas en trocitos por encima. Si buscas sin lactosa, esta es la tarrina que recomendamos sin dudarlo.",
+      "sabores": [
+        { "nombre": "Avena", "color": "#E8D9B8" },
+        { "nombre": "Coco", "color": "#F5EFE1" },
+        { "nombre": "Frambuesa", "color": "#C2185B" }
+      ],
+      "incluye": [
+        "500 ml de helado vegetal",
+        "Coco fresco gratinado",
+        "Frambuesas en trocitos",
+        "Base de avena y almendra"
+      ],
+      "alergenos": ["Frutos secos", "Gluten", "Soja"],
+      "calorias": 340,
+      "valoracion": 4.8,
+      "resenas": 79,
+      "arte": {
+        "variante": "tarrina",
+        "fondo": "#F1EAD9",
+        "taza": "#FFFFFF",
+        "sirope": "#8D6E63",
+        "chispas": ["#C2185B", "#EFEBE3", "#A1887F"],
+        "adorno": "hoja"
+      }
+    }
+  ]
+}

@@ -1,10 +1,24 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 :root {
   --color-pink: #E91E8C;
   --color-dark: #2C1810;
   --color-cream: #FFF0E8;
   --color-amber: #FFC107;
+
+  --radius: 1rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ring: var(--color-pink);
+}
+
+:root {
+  --background: #FFF7F1;
+  --foreground: #2C1810;
 }
 
 html {
