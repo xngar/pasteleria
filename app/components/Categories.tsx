@@ -13,7 +13,7 @@ const categories: Category[] = [
   {
     id: 1,
     name: "Postres dulces",
-    circleBg: "bg-[#FFAEC9]",
+    circleBg: "bg-[#C3D6E2]",
     icon: (
       <svg viewBox="0 0 48 48" className="w-11 h-11 sm:w-13 sm:h-13" fill="none">
         {/* Donut base dough */}
@@ -24,7 +24,7 @@ const categories: Category[] = [
           fill="#FF3E7F"
         />
         {/* Donut hole cutout */}
-        <circle cx="24" cy="24" r="5.5" fill="#FFAEC9" stroke="#B86E38" strokeWidth="1.2" />
+        <circle cx="24" cy="24" r="5.5" fill="#E53935" stroke="#B86E38" strokeWidth="1.2" />
         {/* Sprinkles */}
         <rect x="18" y="12" width="3.8" height="1.8" rx="0.9" fill="#00E5FF" transform="rotate(-20 18 12)" />
         <rect x="27" y="13" width="3.8" height="1.8" rx="0.9" fill="#FFEB3B" transform="rotate(30 27 13)" />
@@ -62,7 +62,7 @@ const categories: Category[] = [
         {/* Tomato */}
         <rect x="10" y="24.5" width="28" height="3" rx="1.5" fill="#E53935" />
         {/* Melted Cheese Corner */}
-        <polygon points="12,27.5 36,27.5 32,32.5 16,30.5" fill="#FFC107" />
+        <polygon points="12,27.5 36,27.5 32,32.5 16,30.5" fill="#669BBC" />
         {/* Patty */}
         <rect x="9" y="29.5" width="30" height="5.5" rx="2.7" fill="#5D4037" />
         {/* Bottom Bun */}
@@ -78,20 +78,20 @@ const categories: Category[] = [
   {
     id: 3,
     name: "Snacks y patatas",
-    circleBg: "bg-[#FF9F1C]",
+    circleBg: "bg-[#F3D9C4]",
     icon: (
       <svg viewBox="0 0 48 48" className="w-11 h-11 sm:w-13 sm:h-13" fill="none">
         {/* Fries standing up */}
-        <rect x="16" y="8" width="3.2" height="18" rx="1" fill="#FFD54F" stroke="#FFB300" strokeWidth="0.8" transform="rotate(-12 16 8)" />
+        <rect x="16" y="8" width="3.2" height="18" rx="1" fill="#669BBC" stroke="#FFB300" strokeWidth="0.8" transform="rotate(-12 16 8)" />
         <rect x="20" y="6" width="3.2" height="20" rx="1" fill="#FFCA28" stroke="#FFA000" strokeWidth="0.8" transform="rotate(-4 20 6)" />
-        <rect x="24.5" y="7" width="3.2" height="19" rx="1" fill="#FFD54F" stroke="#FFB300" strokeWidth="0.8" transform="rotate(5 24.5 7)" />
+        <rect x="24.5" y="7" width="3.2" height="19" rx="1" fill="#669BBC" stroke="#FFB300" strokeWidth="0.8" transform="rotate(5 24.5 7)" />
         <rect x="29" y="9" width="3.2" height="17" rx="1" fill="#FFCA28" stroke="#FFA000" strokeWidth="0.8" transform="rotate(14 29 9)" />
         <rect x="18" y="12" width="2.8" height="14" rx="1" fill="#FFF59D" transform="rotate(-8 18 12)" />
         <rect x="26" y="11" width="2.8" height="15" rx="1" fill="#FFF59D" transform="rotate(8 26 11)" />
         {/* French Fries Carton */}
         <path
           d="M12 22 L36 22 L33 42 C33 43 32 44 31 44 L17 44 C16 44 15 43 15 42 Z"
-          fill="#E91E8C"
+          fill="#C1121F"
           stroke="#C2185B"
           strokeWidth="1.2"
         />
@@ -102,18 +102,18 @@ const categories: Category[] = [
         />
         {/* Treato White Logo Badge */}
         <circle cx="24" cy="36" r="4.5" fill="white" />
-        <path d="M22 36 Q24 34 26 36" stroke="#E91E8C" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+        <path d="M22 36 Q24 34 26 36" stroke="#C1121F" strokeWidth="1.5" strokeLinecap="round" fill="none" />
       </svg>
     ),
   },
   {
     id: 4,
     name: "Batidos y bebidas",
-    circleBg: "bg-[#FFAEC9]",
+    circleBg: "bg-[#C3D6E2]",
     icon: (
       <svg viewBox="0 0 48 48" className="w-11 h-11 sm:w-13 sm:h-13" fill="none">
         {/* Striped Straw */}
-        <path d="M26 6 L29 18" stroke="#E91E8C" strokeWidth="3.5" strokeLinecap="round" />
+        <path d="M26 6 L29 18" stroke="#C1121F" strokeWidth="3.5" strokeLinecap="round" />
         <path d="M26.5 8 L27 10" stroke="white" strokeWidth="3.5" />
         <path d="M27.5 12 L28 14" stroke="white" strokeWidth="3.5" />
         {/* Whipped cream / topping */}
@@ -137,7 +137,7 @@ const categories: Category[] = [
         />
         {/* Cup label */}
         <circle cx="24" cy="35" r="4" fill="white" opacity="0.9" />
-        <path d="M22 35 C23 37 25 37 26 35" stroke="#E91E8C" strokeWidth="1.2" strokeLinecap="round" fill="none" />
+        <path d="M22 35 C23 37 25 37 26 35" stroke="#C1121F" strokeWidth="1.2" strokeLinecap="round" fill="none" />
       </svg>
     ),
   },
@@ -162,7 +162,7 @@ const categories: Category[] = [
           fill="#FFF9C4"
         />
         {/* Cake top pink icing */}
-        <polygon points="8,32 36,18 26,12 8,24" fill="#FF4081" stroke="#E91E8C" strokeWidth="1" />
+        <polygon points="8,32 36,18 26,12 8,24" fill="#FF4081" stroke="#C1121F" strokeWidth="1" />
         {/* Frosting dollops on back */}
         <circle cx="28" cy="14" r="3.5" fill="#FFFFFF" />
         <circle cx="33" cy="16.5" r="3" fill="#FFFFFF" />
@@ -180,13 +180,13 @@ const categories: Category[] = [
   {
     id: 6,
     name: "Combos",
-    circleBg: "bg-[#FF9F1C]",
+    circleBg: "bg-[#F3D9C4]",
     icon: (
       <svg viewBox="0 0 48 48" className="w-11 h-11 sm:w-13 sm:h-13" fill="none">
         {/* Box Top Handle */}
         <path
           d="M19 14 C19 9 29 9 29 14"
-          stroke="#E91E8C"
+          stroke="#C1121F"
           strokeWidth="2.5"
           strokeLinecap="round"
           fill="none"
@@ -194,11 +194,11 @@ const categories: Category[] = [
         {/* Box Lid / Peak */}
         <polygon points="12,18 24,12 36,18 24,20" fill="#FF4081" />
         {/* Box Body */}
-        <polygon points="12,18 36,18 33,39 15,39" fill="#E91E8C" stroke="#C2185B" strokeWidth="1.2" />
+        <polygon points="12,18 36,18 33,39 15,39" fill="#C1121F" stroke="#C2185B" strokeWidth="1.2" />
         {/* Front Meal Bag Icon / Emblem */}
         <rect x="18" y="24" width="12" height="10" rx="2" fill="white" />
         <circle cx="24" cy="28" r="2" fill="#FF9F1C" />
-        <path d="M21 31 Q24 33 27 31" stroke="#E91E8C" strokeWidth="1.2" fill="none" strokeLinecap="round" />
+        <path d="M21 31 Q24 33 27 31" stroke="#C1121F" strokeWidth="1.2" fill="none" strokeLinecap="round" />
       </svg>
     ),
   },
@@ -208,7 +208,7 @@ export default function Categories() {
   const [activeId, setActiveId] = useState<number | null>(null);
 
   return (
-    <section className="relative bg-[#2D1610] text-white overflow-visible select-none -mt-1">
+    <section className="relative bg-[#003049] text-white overflow-visible select-none -mt-1">
       {/* Top Scalloped / Wavy border dividing pink search area and chocolate categories */}
       <div className="w-full overflow-hidden leading-none pointer-events-none">
         <svg
@@ -220,7 +220,7 @@ export default function Categories() {
         >
           <path
             d="M0,20 C120,40 240,0 360,20 C480,40 600,0 720,20 C840,40 960,0 1080,20 C1200,40 1320,0 1440,20 L1440,40 L0,40 Z"
-            fill="#2D1610"
+            fill="#003049"
           />
         </svg>
       </div>
@@ -231,13 +231,13 @@ export default function Categories() {
         <div className="relative flex items-center justify-between sm:justify-center gap-3 sm:gap-6 md:gap-7 overflow-x-auto pt-2 pb-1 px-2 scrollbar-hide">
           {/* Decorative cream doodles (///) placed above Sweet Treats */}
           <div className="absolute -top-3 left-4 sm:left-6 md:left-4 flex items-center gap-1 opacity-90 pointer-events-none">
-            <span className="w-1 h-3.5 bg-[#FFF0E8] rounded-full rotate-[-25deg] inline-block"></span>
-            <span className="w-1 h-4 bg-[#FFF0E8] rounded-full rotate-[-5deg] inline-block"></span>
-            <span className="w-1 h-3.5 bg-[#FFF0E8] rounded-full rotate-[20deg] inline-block"></span>
+            <span className="w-1 h-3.5 bg-[#FDF0D5] rounded-full rotate-[-25deg] inline-block"></span>
+            <span className="w-1 h-4 bg-[#FDF0D5] rounded-full rotate-[-5deg] inline-block"></span>
+            <span className="w-1 h-3.5 bg-[#FDF0D5] rounded-full rotate-[20deg] inline-block"></span>
           </div>
 
           {/* Decorative heart (♡) top right */}
-          <div className="absolute -top-3 right-6 sm:right-10 text-[#FFF0E8] text-xl sm:text-2xl font-light opacity-80 pointer-events-none">
+          <div className="absolute -top-3 right-6 sm:right-10 text-[#FDF0D5] text-xl sm:text-2xl font-light opacity-80 pointer-events-none">
             ♡
           </div>
 
@@ -253,7 +253,7 @@ export default function Categories() {
                 {/* Category Circle */}
                 <div
                   className={`w-[68px] h-[68px] sm:w-[78px] sm:h-[78px] md:w-[82px] md:h-[82px] rounded-full ${cat.circleBg} flex items-center justify-center shadow-md transition-all duration-200 group-hover:scale-105 group-hover:shadow-lg ${
-                    isSelected ? "ring-4 ring-[#FFD54F] scale-105" : ""
+                    isSelected ? "ring-4 ring-[#669BBC] scale-105" : ""
                   }`}
                 >
                   <div className="transition-transform duration-200 group-hover:scale-105">
@@ -263,7 +263,7 @@ export default function Categories() {
 
                 {/* Category Title with Nunito Font */}
                 <span
-                  className="font-nunito text-white font-bold text-[12px] sm:text-[13px] md:text-[14px] mt-2 text-center leading-tight tracking-tight drop-shadow-sm group-hover:text-[#FFD54F] transition-colors"
+                  className="font-nunito text-white font-bold text-[12px] sm:text-[13px] md:text-[14px] mt-2 text-center leading-tight tracking-tight drop-shadow-sm group-hover:text-[#669BBC] transition-colors"
                 >
                   {cat.name}
                 </span>
@@ -303,7 +303,7 @@ export default function Categories() {
         >
           <path
             d="M0,0 L1440,0 L1440,20 C1320,40 1200,0 1080,20 C960,40 840,0 720,20 C600,40 480,0 360,20 C240,40 120,0 0,20 Z"
-            fill="#2D1610"
+            fill="#003049"
           />
         </svg>
       </div>

@@ -153,7 +153,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="es"
       className={`h-full ${inter.variable} ${nunito.variable} ${pacifico.variable} ${playfair.variable}`}
     >
-      <body className="min-h-full flex flex-col antialiased bg-[#FFF0E8]">
+      <body className="min-h-full flex flex-col antialiased bg-[#FDF0D5]">
         {children}
         <CookieBanner />
         <script

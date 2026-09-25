@@ -34,7 +34,7 @@
       "resenas": 218,
       "arte": {
         "variante": "copa",
-        "fondo": "#FFE7C4",
+        "fondo": "#FBE9CE",
         "taza": "#FFF6EC",
         "sirope": "#C2185B",
         "chispas": ["#FFEB3B", "#00E5FF", "#FFFFFF"],
@@ -69,7 +69,7 @@
       "resenas": 174,
       "arte": {
         "variante": "tarrina",
-        "fondo": "#F3E4CE",
+        "fondo": "#F6E8D0",
         "taza": "#FFFDF8",
         "sirope": "#8D5A3B",
         "chispas": ["#5D4037", "#E8D5B7", "#FFFFFF"],
@@ -104,7 +104,7 @@
       "resenas": 143,
       "arte": {
         "variante": "cono",
-        "fondo": "#FFE3C6",
+        "fondo": "#F3E4CC",
         "taza": "#E3A857",
         "sirope": "#E86A17",
         "chispas": ["#FFFFFF", "#FFD180", "#C62828"],
@@ -139,7 +139,7 @@
       "resenas": 96,
       "arte": {
         "variante": "copa",
-        "fondo": "#EADCC8",
+        "fondo": "#EDE2D0",
         "taza": "#FFFFFF",
         "sirope": "#3E2318",
         "chispas": ["#D7CCC8", "#8D6E63", "#FFFFFF"],
@@ -174,7 +174,7 @@
       "resenas": 121,
       "arte": {
         "variante": "copa",
-        "fondo": "#E6F1D6",
+        "fondo": "#E7EEF2",
         "taza": "#FFFFFF",
         "sirope": "#6B8E23",
         "chispas": ["#D7CCC8", "#A8C66C", "#FFFFFF"],
@@ -209,10 +209,10 @@
       "resenas": 88,
       "arte": {
         "variante": "vaso",
-        "fondo": "#FFE1E9",
+        "fondo": "#F7E3DE",
         "taza": "#FFFFFF",
         "sirope": "#E11D48",
-        "chispas": ["#FFFFFF", "#FFB3C6", "#FFD54F"],
+        "chispas": ["#FFFFFF", "#FFB3C6", "#669BBC"],
         "adorno": "fresa"
       }
     },
@@ -244,7 +244,7 @@
       "resenas": 132,
       "arte": {
         "variante": "tarrina",
-        "fondo": "#E4F5E8",
+        "fondo": "#E9F1F2",
         "taza": "#FFFFFF",
         "sirope": "#2F6B4F",
         "chispas": ["#4A2C17", "#A5D6A7", "#FFFFFF"],
@@ -279,7 +279,7 @@
       "resenas": 79,
       "arte": {
         "variante": "tarrina",
-        "fondo": "#F1EAD9",
+        "fondo": "#F1EBDC",
         "taza": "#FFFFFF",
         "sirope": "#8D6E63",
         "chispas": ["#C2185B", "#EFEBE3", "#A1887F"],

@@ -2,11 +2,11 @@
 
 export default function SearchBar() {
   return (
-    <section id="menu" className="bg-gradient-to-b from-[#FFF0E8] to-[#FFA8BF] pt-2 pb-6 px-4 sm:px-6 relative z-10 scroll-mt-16">
+    <section id="menu" className="bg-gradient-to-b from-[#FDF0D5] to-[#C3D6E2] pt-2 pb-6 px-4 sm:px-6 relative z-10 scroll-mt-16">
       <div className="container mx-auto max-w-xl">
         <div className="relative flex items-center bg-white rounded-full shadow-md hover:shadow-lg transition-shadow p-1 pl-5">
           {/* Search Icon */}
-          <div className="mr-3 flex items-center text-[#E91E8C]">
+          <div className="mr-3 flex items-center text-[#C1121F]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-5 h-5"
@@ -27,13 +27,13 @@ export default function SearchBar() {
           <input
             type="text"
             placeholder="Busca hamburguesas, batidos, postres..."
-            className="flex-1 py-2.5 text-gray-700 text-xs sm:text-sm font-medium outline-none bg-transparent placeholder:text-gray-400 placeholder:font-normal"
+            className="flex-1 py-2.5 text-[#003049] text-xs sm:text-sm font-medium outline-none bg-transparent placeholder:text-[#8fb0c4] placeholder:font-normal"
           />
 
           {/* Filter Button */}
           <button
             aria-label="Filtros"
-            className="w-10 h-10 bg-[#E91E8C] hover:bg-[#D81B60] transition-colors flex items-center justify-center rounded-full shadow flex-shrink-0"
+            className="w-10 h-10 bg-[#C1121F] hover:bg-[#780000] transition-colors flex items-center justify-center rounded-full shadow flex-shrink-0"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

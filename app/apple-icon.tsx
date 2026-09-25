@@ -13,7 +13,7 @@ export default function AppleIcon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#FF2D7A",
+          background: "#C1121F",
           borderRadius: 40,
         }}
       >
@@ -25,11 +25,11 @@ export default function AppleIcon() {
             fontStyle: "italic",
             fontSize: 90,
             lineHeight: 1,
-            color: "#FFF8F0",
+            color: "#FDF0D5",
           }}
         >
           T
-          <span style={{ color: "#FFD54F", marginLeft: 4 }}>♥</span>
+          <span style={{ color: "#669BBC", marginLeft: 4 }}>♥</span>
         </div>
       </div>
     ),

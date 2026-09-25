@@ -35,7 +35,7 @@ function DialogOverlay({
     <DialogPrimitive.Overlay
       data-slot="dialog-overlay"
       className={cn(
-        "fixed inset-0 z-50 bg-[#2C1810]/70 backdrop-blur-[3px]",
+        "fixed inset-0 z-50 bg-[#003049]/70 backdrop-blur-[3px]",
         "data-[state=open]:animate-in data-[state=open]:fade-in-0",
         "data-[state=closed]:animate-out data-[state=closed]:fade-out-0",
         className
@@ -60,7 +60,7 @@ function DialogContent({
         data-slot="dialog-content"
         className={cn(
           "fixed top-1/2 left-1/2 z-50 flex w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 -translate-y-1/2 flex-col gap-0",
-          "max-h-[calc(100dvh-2rem)] overflow-hidden rounded-[28px] border-2 border-[#FFD9C7] bg-[#FFF7F1] shadow-2xl",
+          "max-h-[calc(100dvh-2rem)] overflow-hidden rounded-[28px] border-2 border-[#CFDDE8] bg-[#FFFAF0] shadow-2xl",
           "duration-200 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95",
           "data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
           className
@@ -71,7 +71,7 @@ function DialogContent({
         {showCloseButton && (
           <DialogPrimitive.Close
             data-slot="dialog-close"
-            className="absolute top-3 right-3 z-20 grid size-9 place-items-center rounded-full bg-white/90 text-[#2C1810] shadow-sm ring-1 ring-black/5 transition-colors hover:bg-[#E91E8C] hover:text-white focus-visible:ring-2 focus-visible:ring-[#E91E8C] focus-visible:outline-none"
+            className="absolute top-3 right-3 z-20 grid size-9 place-items-center rounded-full bg-white/90 text-[#003049] shadow-sm ring-1 ring-black/5 transition-colors hover:bg-[#C1121F] hover:text-white focus-visible:ring-2 focus-visible:ring-[#C1121F] focus-visible:outline-none"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -2,10 +2,17 @@
 @import "tw-animate-css";
 
 :root {
-  --color-pink: #E91E8C;
-  --color-dark: #2C1810;
-  --color-cream: #FFF0E8;
-  --color-amber: #FFC107;
+  --molten-lava: #780000;
+  --brick-red: #c1121f;
+  --papaya-whip: #fdf0d5;
+  --deep-space-blue: #003049;
+  --steel-blue: #669bbc;
+
+  /* superficies y bordes derivados */
+  --surface: #fffaf0;
+  --surface-muted: #e8f0f6;
+  --border-soft: #cfdde8;
+  --text-muted: #4a6a80;
 
   --radius: 1rem;
 }
@@ -13,12 +20,12 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-ring: var(--color-pink);
+  --color-ring: var(--brick-red);
 }
 
 :root {
-  --background: #FFF7F1;
-  --foreground: #2C1810;
+  --background: var(--papaya-whip);
+  --foreground: var(--deep-space-blue);
 }
 
 html {
@@ -26,8 +33,8 @@ html {
 }
 
 body {
-  background-color: #FFF0E8;
-  color: #2C1810;
+  background-color: var(--papaya-whip);
+  color: var(--deep-space-blue);
   font-family: var(--font-inter), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -66,9 +73,9 @@ body {
   position: relative;
   width: 42px;
   height: 42px;
-  background-color: #ff2d7a;
+  background-color: var(--brick-red);
   transform: rotate(45deg);
-  box-shadow: 0 10px 25px rgba(255, 45, 122, 0.45);
+  box-shadow: 0 10px 25px rgba(193, 18, 31, 0.45);
   transition: transform 0.25s ease, filter 0.25s ease;
 }
 .heart-btn::before,
@@ -93,7 +100,7 @@ body {
   filter: brightness(1.08);
 }
 .heart-btn:focus-visible {
-  outline: 3px solid #ff2d7a;
+  outline: 3px solid var(--brick-red);
   outline-offset: 4px;
 }
 .heart-arrow {
@@ -127,7 +134,7 @@ body {
   position: absolute;
   bottom: 0;
   opacity: 0;
-  color: #ff2d7a;
+  color: var(--brick-red);
   will-change: transform, opacity;
   animation: heart-float 2.2s ease-in-out infinite;
 }
@@ -143,9 +150,9 @@ body {
 .heart-burst span:nth-child(5) { left: -2px; font-size: 10px; animation-delay: 1.4s; }
 .heart-burst span:nth-child(6) { left: -20px; font-size: 21px; animation-delay: 1.75s; }
 .heart-burst span:nth-child(2),
-.heart-burst span:nth-child(4) { color: #ffd1e6; }
+.heart-burst span:nth-child(4) { color: var(--surface-muted); }
 .heart-burst span:nth-child(3),
-.heart-burst span:nth-child(6) { color: #ff7ab3; }
+.heart-burst span:nth-child(6) { color: var(--steel-blue); }
 
 @keyframes heart-float {
   0% { opacity: 0; transform: translateY(0) scale(0.4) rotate(12deg); }

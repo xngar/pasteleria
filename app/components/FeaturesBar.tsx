@@ -58,7 +58,7 @@ const features = [
 
 export default function FeaturesBar() {
   return (
-    <section className="relative bg-[#FF2D7A] text-white overflow-hidden">
+    <section className="relative bg-[#C1121F] text-white overflow-hidden">
       {/* Top Scalloped Wave dividing cream content and pink features bar */}
       <div className="w-full overflow-hidden leading-none pointer-events-none -mt-1">
         <svg
@@ -70,7 +70,7 @@ export default function FeaturesBar() {
         >
           <path
             d="M0,0 C120,30 240,0 360,30 C480,0 600,30 720,0 C840,30 960,0 1080,30 C1200,0 1320,30 1440,0 L1440,32 L0,32 Z"
-            fill="#FF2D7A"
+            fill="#C1121F"
           />
         </svg>
       </div>
@@ -89,7 +89,7 @@ export default function FeaturesBar() {
                 <p className="text-white font-bold text-xs sm:text-sm md:text-base leading-tight">
                   {feature.title}
                 </p>
-                <p className="text-pink-100 text-[11px] sm:text-xs font-medium mt-0.5">
+                <p className="text-[#fdf0d5] text-[11px] sm:text-xs font-medium mt-0.5">
                   {feature.subtitle}
                 </p>
               </div>

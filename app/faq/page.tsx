@@ -87,29 +87,29 @@ const faqLdJson = {
 
 export default function FAQPage() {
   return (
-    <main className="min-h-screen bg-[#FFF0E8]">
-      <div className="bg-[#2C1810] text-white px-4 sm:px-6 pt-16 pb-10">
+    <main className="min-h-screen bg-[#FDF0D5]">
+      <div className="bg-[#003049] text-white px-4 sm:px-6 pt-16 pb-10">
         <div className="container mx-auto max-w-3xl">
-          <p className="text-[#FF2D7A] text-xs font-extrabold uppercase tracking-[0.25em] mb-2">
+          <p className="text-[#C1121F] text-xs font-extrabold uppercase tracking-[0.25em] mb-2">
             Ayuda
           </p>
           <h1 className="font-serif italic font-extrabold text-3xl sm:text-4xl leading-tight">
             Preguntas frecuentes
           </h1>
-          <p className="text-gray-300 text-sm sm:text-base mt-3 max-w-xl leading-relaxed">
+          <p className="text-[#8fb0c4] text-sm sm:text-base mt-3 max-w-xl leading-relaxed">
             Resolvemos tus dudas más golosas. ¿No encuentras la respuesta?
             <span> </span>
-            <Link href="#" className="text-[#FF2D7A] hover:underline font-semibold">
+            <Link href="#" className="text-[#C1121F] hover:underline font-semibold">
               Contáctanos
             </Link>
             .
           </p>
 
           <div className="mt-6 bg-white/10 ring-1 ring-white/15 rounded-2xl p-4">
-            <p className="text-[#FF2D7A] text-[11px] font-extrabold uppercase tracking-[0.25em] mb-3">
+            <p className="text-[#C1121F] text-[11px] font-extrabold uppercase tracking-[0.25em] mb-3">
               En resumen
             </p>
-            <ul className="space-y-2 text-sm text-gray-200">
+            <ul className="space-y-2 text-sm text-[#d9e4ec]">
               {[
                 "Reparto en frío a domicilio en unos 30-45 minutos.",
                 "Opciones veganas y sin lactosa en helados y postres.",
@@ -117,7 +117,7 @@ export default function FAQPage() {
                 "Programa de fidelidad gratuito: ganas puntos en cada pedido.",
               ].map((point) => (
                 <li key={point} className="flex items-start gap-2">
-                  <span className="mt-2 w-2 h-2 bg-[#FF2D7A] rounded-full flex-shrink-0" aria-hidden="true" />
+                  <span className="mt-2 w-2 h-2 bg-[#C1121F] rounded-full flex-shrink-0" aria-hidden="true" />
                   <span>{point}</span>
                 </li>
               ))}
@@ -142,17 +142,17 @@ export default function FAQPage() {
                         : undefined
                 }
                 open={index === 0}
-                className="group bg-white rounded-2xl shadow-sm overflow-hidden ring-1 ring-[#2C1810]/5 scroll-mt-24"
+                className="group bg-white rounded-2xl shadow-sm overflow-hidden ring-1 ring-[#003049]/5 scroll-mt-24"
               >
                 <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none selection:bg-transparent">
-                  <span className="text-[#2C1810] font-bold text-sm sm:text-base leading-snug">
+                  <span className="text-[#003049] font-bold text-sm sm:text-base leading-snug">
                     {faq.question}
                   </span>
-                  <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[#FF2D7A] text-white flex items-center justify-center text-lg font-bold transition-transform duration-200 group-open:rotate-45" aria-hidden="true">
+                  <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[#C1121F] text-white flex items-center justify-center text-lg font-bold transition-transform duration-200 group-open:rotate-45" aria-hidden="true">
                     +
                   </span>
                 </summary>
-                <p className="px-5 pb-5 text-gray-600 text-sm sm:text-base leading-relaxed">
+                <p className="px-5 pb-5 text-[#4a6a80] text-sm sm:text-base leading-relaxed">
                   {faq.answer}
                 </p>
               </details>
@@ -160,10 +160,10 @@ export default function FAQPage() {
           </div>
 
           <div id="contacto" className="mt-10 bg-white/60 rounded-2xl p-6 text-center scroll-mt-24">
-            <p className="text-[#2C1810] font-extrabold text-lg font-serif italic">
+            <p className="text-[#003049] font-extrabold text-lg font-serif italic">
               ¿Sigues con dudas? 💭
             </p>
-            <p className="text-gray-600 text-sm mt-1">
+            <p className="text-[#4a6a80] text-sm mt-1">
               Escríbenos y te ayudamos a llenar tu pedido de sonrisas.
             </p>
           </div>

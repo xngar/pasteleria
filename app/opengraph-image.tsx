@@ -17,7 +17,7 @@ export default function OpengraphImage() {
           alignItems: "center",
           justifyContent: "center",
           padding: 72,
-          background: "linear-gradient(135deg, #FFF8F0 0%, #FFE3EC 55%, #FFB5C9 100%)",
+          background: "linear-gradient(135deg, #FDF0D5 0%, #E7EEF2 55%, #669BBC 100%)",
           position: "relative",
         }}
       >
@@ -29,7 +29,7 @@ export default function OpengraphImage() {
             fontStyle: "italic",
             fontSize: 128,
             lineHeight: 1,
-            color: "#D64045",
+            color: "#C1121F",
           }}
         >
           Aquí, la felicidad
@@ -42,7 +42,7 @@ export default function OpengraphImage() {
             fontStyle: "italic",
             fontSize: 150,
             lineHeight: 1,
-            color: "#3D2B1F",
+            color: "#003049",
             marginTop: 8,
           }}
         >
@@ -56,11 +56,11 @@ export default function OpengraphImage() {
             fontStyle: "italic",
             fontSize: 64,
             lineHeight: 1,
-            color: "#D64045",
+            color: "#C1121F",
             marginTop: 20,
           }}
         >
-          en cada bola <span style={{ color: "#FF2D7A", marginLeft: 12, fontSize: 72 }}>♥</span>
+          en cada bola <span style={{ color: "#C1121F", marginLeft: 12, fontSize: 72 }}>♥</span>
         </div>
         <div
           style={{
@@ -70,7 +70,7 @@ export default function OpengraphImage() {
             fontWeight: 600,
             fontSize: 30,
             letterSpacing: 6,
-            color: "#5C4A3D",
+            color: "#4A6A80",
           }}
         >
           DULCE · SALADO · SONRISAS — treato.com
@@ -85,7 +85,7 @@ export default function OpengraphImage() {
             fontWeight: 900,
             fontStyle: "italic",
             fontSize: 34,
-            color: "#FF2D7A",
+            color: "#C1121F",
           }}
         >
           Treato ♥

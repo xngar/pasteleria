@@ -49,17 +49,17 @@ export default function CookieBanner() {
       aria-label="Aviso de cookies"
       className="fixed bottom-4 left-4 right-4 z-[60] sm:left-1/2 sm:right-auto sm:w-full sm:max-w-xl sm:-translate-x-1/2"
     >
-      <div className="bg-[#2C1810] text-white rounded-2xl shadow-2xl ring-1 ring-white/10 overflow-hidden">
+      <div className="bg-[#003049] text-white rounded-2xl shadow-2xl ring-1 ring-white/10 overflow-hidden">
         <div className="p-5 sm:p-6">
           <div className="flex items-start gap-3">
             <span aria-hidden="true" className="text-xl">🍪</span>
             <div>
               <p className="font-extrabold text-sm sm:text-base">Usamos cookies</p>
-              <p className="text-gray-300 text-xs sm:text-sm mt-1 leading-relaxed">
+              <p className="text-[#8fb0c4] text-xs sm:text-sm mt-1 leading-relaxed">
                 Utilizamos cookies propias y de terceros para mejorar tu experiencia,
                 analizar el tráfico y mostrarte contenido que te encante. Puedes leer
                 más en nuestras{" "}
-                <Link href="/faq#cookies" className="text-[#FF2D7A] hover:underline font-semibold">
+                <Link href="/faq#cookies" className="text-[#C1121F] hover:underline font-semibold">
                   preguntas frecuentes
                 </Link>
                 .
@@ -77,7 +77,7 @@ export default function CookieBanner() {
             <button
               type="button"
               onClick={() => decide("accepted")}
-              className="flex-1 rounded-full px-5 py-2.5 text-xs sm:text-sm font-bold tracking-widest uppercase bg-[#FF2D7A] hover:bg-[#e1276e] transition-colors cursor-pointer"
+              className="flex-1 rounded-full px-5 py-2.5 text-xs sm:text-sm font-bold tracking-widest uppercase bg-[#C1121F] hover:bg-[#780000] transition-colors cursor-pointer"
             >
               Aceptar todo
             </button>

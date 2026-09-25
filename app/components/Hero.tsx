@@ -32,14 +32,14 @@ export default function Hero() {
       id="inicio"
       className="relative overflow-hidden bg-[var(--cream)] select-none flex flex-col min-h-svh scroll-mt-0"
       style={{
-        "--cream": "#FFF8F0",
-        "--mint": "#A8E6CF",
-        "--peach": "#FFB5A7",
-        "--rose": "#F8A5C2",
-        "--chocolate": "#3D2B1F",
-        "--chocolate-light": "#5C4A3D",
-        "--cherry": "#D64045",
-        "--cherry-soft": "#F5C6CB",
+        "--cream": "#FDF0D5",
+        "--mint": "#A9C4D6",
+        "--peach": "#F3D9C4",
+        "--rose": "#E8A6A9",
+        "--chocolate": "#003049",
+        "--chocolate-light": "#4A6A80",
+        "--cherry": "#C1121F",
+        "--cherry-soft": "#F0C9C6",
       } as React.CSSProperties}
       aria-labelledby="hero-title"
     >
@@ -54,9 +54,9 @@ export default function Hero() {
           priority
         />
         {/* Readability overlays: heavy cream over the text side, transparent over the photo side */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FFF8F0] via-[#FFF8F0]/80 to-[#FFF8F0] lg:bg-gradient-to-r lg:from-[#FFF8F0] lg:via-[#FFF8F0]/88 lg:to-[#FFF8F0]/10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FDF0D5] via-[#FDF0D5]/80 to-[#FDF0D5] lg:bg-gradient-to-r lg:from-[#FDF0D5] lg:via-[#FDF0D5]/88 lg:to-[#FDF0D5]/10" />
         {/* Bottom fade into the wave */}
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#FFF8F0]/95 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#FDF0D5]/95 to-transparent" />
       </div>
 
       {/* Subtle noise texture overlay */}
@@ -247,12 +247,12 @@ export default function Hero() {
               {/* Trust signal chips - friendly credibility */}
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-2">
                 <span className="inline-flex items-center gap-1.5 text-[var(--chocolate-light)] text-xs sm:text-sm font-semibold">
-                  <span className="text-[#F5A623] text-sm" aria-hidden="true">★</span>
+                  <span className="text-[#669bbc] text-sm" aria-hidden="true">★</span>
                   4.9 · +2.400 bolas felices
                 </span>
                 <span className="w-1 h-1 rounded-full bg-[var(--rose)]" aria-hidden="true" />
                 <span className="inline-flex items-center gap-1.5 text-[var(--chocolate-light)] text-xs sm:text-sm font-semibold">
-                  <span className="text-[#A8E6CF] text-sm" aria-hidden="true">✦</span>
+                  <span className="text-[#669bbc] text-sm" aria-hidden="true">✦</span>
                   Opciones veganas y sin lactosa
                 </span>
               </div>
@@ -287,8 +287,8 @@ export default function Hero() {
         >
           <defs>
             <linearGradient id="waveGradient" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
-              <stop offset="0%" stopColor="#F8A5C2" stopOpacity="0.95" />
-              <stop offset="100%" stopColor="#FFB5A7" stopOpacity="0.9" />
+              <stop offset="0%" stopColor="#E8A6A9" stopOpacity="0.95" />
+              <stop offset="100%" stopColor="#F3D9C4" stopOpacity="0.9" />
             </linearGradient>
           </defs>
           <path

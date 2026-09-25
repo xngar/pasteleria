@@ -7,18 +7,18 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-bold transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-[#E91E8C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FFF0E8] [&_svg:not([class*='size-'])]:size-4 shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-bold transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-[#C1121F] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FDF0D5] [&_svg:not([class*='size-'])]:size-4 shrink-0",
   {
     variants: {
       variant: {
         default:
-          "bg-[#E91E8C] text-white shadow-md hover:bg-[#c2177a] hover:shadow-lg active:scale-[0.97]",
+          "bg-[#C1121F] text-white shadow-md hover:bg-[#780000] hover:shadow-lg active:scale-[0.97]",
         chocolate:
-          "bg-[#2C1810] text-white shadow-md hover:bg-[#1A0E0A] hover:shadow-lg active:scale-[0.97]",
+          "bg-[#003049] text-white shadow-md hover:bg-[#780000] hover:shadow-lg active:scale-[0.97]",
         outline:
-          "border-2 border-[#2C1810] bg-transparent text-[#2C1810] hover:bg-[#2C1810] hover:text-white",
-        ghost: "hover:bg-black/5 text-[#2C1810]",
-        link: "text-[#E91E8C] underline-offset-4 hover:underline",
+          "border-2 border-[#003049] bg-transparent text-[#003049] hover:bg-[#003049] hover:text-white",
+        ghost: "hover:bg-black/5 text-[#003049]",
+        link: "text-[#C1121F] underline-offset-4 hover:underline",
       },
       size: {
         default: "h-10 px-5 has-[>svg]:px-4",

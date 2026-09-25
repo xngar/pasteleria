@@ -10,8 +10,8 @@ export default function manifest(): MetadataRoute.Manifest {
       "Helados artesanales, postres, hamburguesas y batidos hechos a mano, entregados en frío a tu puerta.",
     start_url: "/",
     display: "standalone",
-    background_color: "#FFF0E8",
-    theme_color: "#FF2D7A",
+    background_color: "#FDF0D5",
+    theme_color: "#C1121F",
     lang: "es",
     icons: [
       {
